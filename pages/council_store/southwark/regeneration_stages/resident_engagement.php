@@ -96,7 +96,7 @@
   </header>
 </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('../../../../../images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('../../../../images/demo/backgrounds/01.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
 
     <ul>
@@ -116,7 +116,7 @@
       <h6>Regeneration Stages</h6>
       <nav class="sdb_holder">
         <ul>
-          <li><a href="mainstream.php">Main-Stream Media</a></li>
+          <li><a href="../../../../pages/council_store/southwark/mainstream.php">Main-Stream Media</a></li>
           <p>Pre-Plan Consultation<p>
           <li><a href="#">Resident Engagement</a></li>
           <li><a href="#">Financial Viability</a>

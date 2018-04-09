@@ -44,42 +44,37 @@
         <li class="active"><a href="../../../index.html">Home</a></li>
         <li><a class="drop" href="#">Locations</a>
           <ul>
-            <li><a href="#">Barking and Dagenham</a></li>
-            <li><a href="#">Barnet</a></li>
-            <li><a href="#">Bexley</a></li>
-            <li><a href="#">Brent</a></li>
-            <li><a href="#">Bromley</a></li>
-            <li><a href="#">Camden</a></li>
-            <li><a href="#">City of London</a></li>
-            <li><a href="#">Croydon</a></li>
-            <li><a href="#">Ealing</a></li>
-            <li><a href="#">Enfield</a></li>
-            <li><a href="#">Greenwich</a></li>
-            <li><a href="#">Hackney</a></li>
-            <li><a href="#">Hammersmith and Fulham</a></li>
-            <li><a href="#">Harrow</a></li>
-            <li><a href="#">Havering</a></li>
-            <li><a href="#">Hillingdon</a></li>
-            <li><a href="#">Hounslow</a></li>
-            <li><a href="#">Islington</a></li>
-            <li><a href="#">Kensington and Chelsea</a></li>
-            <li><a href="#">Kingston upon Thames</a></li>
-            <li><a href="#">Lambeth</a></li>
-            <li><a href="#">Lewisham</a></li>
-            <li><a href="#">Merton</a></li>
-            <li><a href="#">Newham</a></li>
-            <li><a href="#">Richmond upon Thames</a></li>
-            <li><a href="#">Southwark</a></li>
-            <li><a href="#">Tower Hamlets</a></li>
-            <li><a href="#">Waltham Forest</a></li>
-            <li><a href="#">Wandsworth</a></li>
-            <li><a href="#">Westminster</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/barking_and_dagenham/barking_and_dagenham.php">Barking and Dagenham</a></li>
+              <li><a href="/housing-project-2018/pages/council_store/barnet/barnet.php">Barnet</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/bexley/bexley.php">Bexley</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/brent/brent.php">Brent</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/bromley/bromley.php">Bromley</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/camden/camden.php">Camden</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/city_of_london/city_of_london.php">City of London</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/croydon/croydon.php">Croydon</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/ealing/ealing.php">Ealing</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/enfield/enfield.php">Enfield</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/greenwich/greenwich.php">Greenwich</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/hackney/hackney.php">Hackney</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/hammersmith_and_fulham/hammersmith_and_fulham.php">Hammersmith and Fulham</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/harrow/harrow.php">Harrow</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/havering/havering.php">Havering</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/hillingdon/hillingdon.php">Hillingdon</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/hounslow/hounslow.php">Hounslow</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/islington/islington.php">Islington</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/kensington_and_chelsea/kensignton_and_chelsea.php">Kensington and Chelsea</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/kingston_upon_thames/kingston_upon_thames.php">Kingston upon Thames</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/lambeth/lambeth.php">Lambeth</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/lewisham/lewisham.php">Lewisham</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/merton/merton.php">Merton</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/newham/newham.php">Newham</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/richmond_upon_thames/richmond_upon_thames.php">Richmond upon Thames</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/southwark/southwark.php">Southwark</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/tower_hamlets/tower_hamlets.php">Tower Hamlets</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/waltham_forest/waltham_forest.php">Waltham Forest</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/wandsworth/wandsworth.php">Wandsworth</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/westminster/westminster.php">Westminster</a></li>
 
-
-            <li><a href="full-width.html">Full Width</a></li>
-            <li class="active"><a href="sidebar-left.html">Sidebar Left</a></li>
-            <li><a href="sidebar-right.html">Sidebar Right</a></li>
-            <li><a href="basic-grid.html">Basic Grid</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">National Data</a>
@@ -96,7 +91,7 @@
   </header>
 </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('../../../../images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('../../../images/demo/backgrounds/01.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
 
     <ul>
