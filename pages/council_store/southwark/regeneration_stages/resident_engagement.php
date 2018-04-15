@@ -96,7 +96,7 @@
   </header>
 </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('../../../../images/demo/backgrounds/01.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('/housing-project-2018/images/demo/backgrounds/01.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
 
     <ul>
@@ -116,7 +116,7 @@
       <h6>Regeneration Stages</h6>
       <nav class="sdb_holder">
         <ul>
-          <li><a href="../../../../pages/council_store/southwark/mainstream.php">Main-Stream Media</a></li>
+          <li><a href="mainstream.php">Main-Stream Media</a></li>
           <p>Pre-Plan Consultation<p>
           <li><a href="#">Resident Engagement</a></li>
           <li><a href="#">Financial Viability</a>
@@ -226,7 +226,7 @@
         // If the date isnt empty then print too the user in the correct readable format. 
         if ($dateInfo != "") {
           echo "<p> Published Date: " . $dateInfo['day'] . " " . date("F", strtotime($dateStr)) . " " . $dateInfo['year'] . "</p>";
-                
+
         } else {
           echo "<p> ";
         }
@@ -404,11 +404,11 @@
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="../../../layout/scripts/jquery.min.js"></script>
-<script src="../../../layout/scripts/jquery.backtotop.js"></script>
-<script src="../../../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="/housing-project-2018/layout/scripts/jquery.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.backtotop.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.mobilemenu.js"></script>
 
-<script src="../../../layout/scripts/jquery.placeholder.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.placeholder.min.js"></script>
 
 </body>
 </html>

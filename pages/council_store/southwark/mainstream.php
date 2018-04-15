@@ -44,36 +44,8 @@
         <li class="active"><a href="../../../index.html">Home</a></li>
         <li><a class="drop" href="#">Locations</a>
           <ul>
-            <li><a href="#">Barking and Dagenham</a></li>
-            <li><a href="#">Barnet</a></li>
-            <li><a href="#">Bexley</a></li>
-            <li><a href="#">Brent</a></li>
-            <li><a href="#">Bromley</a></li>
-            <li><a href="#">Camden</a></li>
-            <li><a href="#">City of London</a></li>
-            <li><a href="#">Croydon</a></li>
-            <li><a href="#">Ealing</a></li>
-            <li><a href="#">Enfield</a></li>
-            <li><a href="#">Greenwich</a></li>
-            <li><a href="#">Hackney</a></li>
-            <li><a href="#">Hammersmith and Fulham</a></li>
-            <li><a href="#">Harrow</a></li>
-            <li><a href="#">Havering</a></li>
-            <li><a href="#">Hillingdon</a></li>
-            <li><a href="#">Hounslow</a></li>
-            <li><a href="#">Islington</a></li>
-            <li><a href="#">Kensington and Chelsea</a></li>
-            <li><a href="#">Kingston upon Thames</a></li>
-            <li><a href="#">Lambeth</a></li>
-            <li><a href="#">Lewisham</a></li>
-            <li><a href="#">Merton</a></li>
-            <li><a href="#">Newham</a></li>
-            <li><a href="#">Richmond upon Thames</a></li>
-            <li><a href="#">Southwark</a></li>
-            <li><a href="#">Tower Hamlets</a></li>
-            <li><a href="#">Waltham Forest</a></li>
-            <li><a href="#">Wandsworth</a></li>
-            <li><a href="#">Westminster</a></li>
+
+            <li><a href="/housing_project_2018/pages/council_store/southwark/southwark.php">Southwark</a></li>
           </ul>
         </li>
         <li><a href="#">Upload Data</a></li>
