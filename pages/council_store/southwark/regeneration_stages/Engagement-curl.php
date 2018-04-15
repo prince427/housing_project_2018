@@ -45,9 +45,10 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 		}
 
 		$description = $response_decode->results[$i]->description;
-		
+        $link = $response_decode ->results[$i]->link;
+
 		// Stores the echo into a variable so it can be passed through.
-	    $item = '<div class="item"><p>' .$description. '</p>  <p> Published date: '.$dateInfo .' </p></div>';
+	    $item = '<div class="item"><p>' .$description. '</p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$dateInfo.' </p></div>';
 
 	    
 
