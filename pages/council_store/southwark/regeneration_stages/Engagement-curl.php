@@ -53,7 +53,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         // Converts date String into date format
         $dateStr = (!empty($response_decode->results[$i]->public_timestamp)) ? $response_decode->results[$i]->public_timestamp : "";
 
-        //Formats date
+        //Formate date
         $formatDate = date("d F Y", strtotime($dateStr));
 
 		// Stores the echo into a variable so it can be passed through.
