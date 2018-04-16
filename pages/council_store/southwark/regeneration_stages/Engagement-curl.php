@@ -33,7 +33,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	for($i = 0; $i < count($response_decode->results); $i++){
 
         if(!empty($response_decode->results[$i]->public_timestamp)){
-            $dateInfo = $response_decode->results[$i]->public_timestamp;
+            $dateInfo = ($response_decode->results[$i]->public_timestamp);
         } else {
             $dateInfo = "No date info";
         }
@@ -44,11 +44,20 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 			$description = 'No description';
 		}
 
+		// Creates description variable
 		$description = $response_decode->results[$i]->description;
+
+        // Creates link variable from JSON results
         $link = $response_decode ->results[$i]->link;
 
+        // Converts date String into date format
+        $dateStr = (!empty($response_decode->results[$i]->public_timestamp)) ? $response_decode->results[$i]->public_timestamp : "";
+
+        //Formats date
+        $formatDate = date("d F Y", strtotime($dateStr));
+
 		// Stores the echo into a variable so it can be passed through.
-	    $item = '<div class="item"><p>' .$description. '</p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$dateInfo.' </p></div>';
+	    $item = '<div class="item"><p>' .$description. ' </p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$formatDate.' </p></div>';
 
 	    
 
@@ -72,7 +81,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 } else {
 	$response = ["success" => false, "message" => "Couldn't fetch data"];
 }
-
 // user print
 echo json_encode($response);
 
