@@ -5,7 +5,7 @@
 <title>Regeneration Data Store | Pages | Sidebar Left</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 
@@ -33,44 +33,23 @@
   <header id="header" class="hoc clear"> 
 
     <div id="logo" class="fl_left">
-      <h1><a href="../../../../index.html">Regeneration Data Store</a></h1>
+      <h1><a href="/housing_project_2018/index.html">Regeneration Data Store</a></h1>
       <i class="fa fa-map-o"></i>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a class="drop" href="#">Locations</a>
+        <li class="active"><a href="/housing_project_2018/index.html">Home</a></li>
+        <li><a class="drop" href="/housing_project_2018/pages/locations.html">Locations</a>
           <ul>
-            <li><a href="#">Barking and Dagenham</a></li>
-            <li><a href="#">Barnet</a></li>
-            <li><a href="#">Bexley</a></li>
-            <li><a href="#">Brent</a></li>
-            <li><a href="#">Bromley</a></li>
-            <li><a href="#">Camden</a></li>
-            <li><a href="#">City of London</a></li>
-            <li><a href="#">Croydon</a></li>
-            <li><a href="#">Ealing</a></li>
-            <li><a href="#">Enfield</a></li>
-            <li><a href="#">Greenwich</a></li>
-            <li><a href="#">Hackney</a></li>
-            <li><a href="#">Hammersmith and Fulham</a></li>
-            <li><a href="#">Harrow</a></li>
-            <li><a href="#">Havering</a></li>
-            <li><a href="#">Hillingdon</a></li>
-            <li><a href="#">Hounslow</a></li>
-            <li><a href="#">Islington</a></li>
-            <li><a href="#">Kensington and Chelsea</a></li>
-            <li><a href="#">Kingston upon Thames</a></li>
-            <li><a href="#">Lambeth</a></li>
-            <li><a href="#">Lewisham</a></li>
-            <li><a href="#">Merton</a></li>
-            <li><a href="#">Newham</a></li>
-            <li><a href="#">Richmond upon Thames</a></li>
-            <li><a href="#">Southwark</a></li>
-            <li><a href="#">Tower Hamlets</a></li>
-            <li><a href="#">Waltham Forest</a></li>
-            <li><a href="#">Wandsworth</a></li>
-            <li><a href="#">Westminster</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/barnet/barnet.php">Barnet</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/edinburgh/edinburgh.php">Edinburgh</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/glasglow/glasglow.php">Glasglow</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/leeds/leeds.php">Leeds</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough.php">Scarborough</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/southwark/southwark.php">Southwark</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
           </ul>
         </li>
         <li><a class="drop" href="#">National Data</a>
@@ -87,7 +66,7 @@
   </header>
 </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('../../../../../images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('/housing_project_2018/images/demo/backgrounds/01.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
 
     <ul>
@@ -190,7 +169,7 @@
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">News Arcticles</h6>
+      <h6 class="title">News Articles</h6>
       <ul class="nospace linklist">
         <li><a href="#">Example</a></li>
         <li><a href="#">Example</a></li>
@@ -218,18 +197,18 @@
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
 
-    <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
+    <p class="fl_left">Copyright &copy; 2018 <a href="#">Kieran Amrane-Rendall & Nazim Ahmed</a></p>
   </div>
 </div>
 
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="../../../layout/scripts/jquery.min.js"></script>
-<script src="../../../layout/scripts/jquery.backtotop.js"></script>
-<script src="../../../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.backtotop.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.mobilemenu.js"></script>
 
-<script src="../../../layout/scripts/jquery.placeholder.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.placeholder.min.js"></script>
 
 </body>
 </html>
