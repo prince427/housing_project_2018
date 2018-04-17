@@ -167,7 +167,7 @@
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">News Arcticles</h6>
+      <h6 class="title">News Articles</h6>
       <ul class="nospace linklist">
         <li><a href="#">Example</a></li>
         <li><a href="#">Example</a></li>

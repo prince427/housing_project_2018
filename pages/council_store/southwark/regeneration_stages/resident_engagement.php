@@ -177,7 +177,7 @@
 
       // Using Strpos, its used to check for keywords within the content.
       $strLength = strlen($a);
-      $pos = strpos(strtolower($a), "housing");
+      $pos = strpos(strtolower($a), " ");
       #$pos2 = strpos(strtolower($a), " ");
 
       // If statement on if the keyword is present. Can be used for multiple keywords.

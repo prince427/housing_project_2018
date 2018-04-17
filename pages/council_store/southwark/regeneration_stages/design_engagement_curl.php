@@ -7,7 +7,6 @@ $response = [];
 $results = [];
 $start = null;
 $city = null;
-$info = array();
 
 
 
@@ -24,9 +23,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
     // Decoding the JSON.
     $response_decode = json_decode($curl);
 
-    foreach($response_decode->results as $value){
-        $info[] = $value;
-    }
 
     // var_dump($curl); ---- USED FOR TESTING
     // Sets incrementation values on the results.
@@ -70,7 +66,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
             $results[] = ($item);
 
         }
-
 
     }
 
