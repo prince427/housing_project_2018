@@ -47,7 +47,7 @@
                         <li><a href="/housing_project_2018/pages/council_store/barnet/barnet.php">Barnet</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/edinburgh/edinburgh.php">Edinburgh</a></li>
-                        <li><a href="/housing_project_2018/pages/council_store/glasglow/glasglow.php">Glasglow</a></li>
+                        <li><a href="/housing_project_2018/pages/council_store/glasgow/glasgow.php">Glasgow</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/leeds/leeds.php">Leeds</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough.php">Scarborough</a></li>
@@ -111,7 +111,7 @@
 
             <div id="media">
                 <?php
-                // URL to the JSON using Rengeneration AND southwark as keywords.
+                // URL to the JSON using Rengeneration AND Barnet as keywords.
                 $json = file_get_contents("https://content.guardianapis.com/search?q=regeneration%20AND%20barnet&from-date=2014-01-01&api-key=2c0e1a7c-7fcc-4a0f-a15e-73ee51d1e665");
                 // Stores the decoded data within a variable
                 $json_decoded = json_decode($json);

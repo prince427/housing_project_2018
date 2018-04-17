@@ -24,6 +24,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	$response_decode = json_decode($curl);
 
 
+
 	// var_dump($curl); ---- USED FOR TESTING
 	// Sets incrementation values on the results.
 	for($i = 0; $i < count($response_decode->results); $i++){
@@ -47,7 +48,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         $link = $response_decode ->results[$i]->link;
 
         // Converts date String into date format
-        $dateStr = (!empty($response_decode->results[$i]->public_timestamp)) ? $response_decode->results[$i]->public_timestamp : "";
+        $dateStr = (!empty($dateInfo)) ? $dateInfo : "";
 
         //Format date
         $formatDate = date("d F Y", strtotime($dateStr));
@@ -60,7 +61,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	    // Find keyword in description before adding to results array
 
 	    $strLength = strlen($description);
-      	$pos = strpos(strtolower($description), " ");
+      	$pos = strpos(strtolower($description), "housing");
 
 	    if($pos !== false) {
 	    	$results[] = ($item);
@@ -78,6 +79,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	$response = ["success" => false, "message" => "Couldn't fetch data"];
 }
 // user print
+
 echo json_encode($response);
 
 

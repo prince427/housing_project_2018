@@ -74,7 +74,7 @@
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/glasglow/glasglow.php">Glasglow</a></li>
         </ul>
 
     </div>
@@ -90,20 +90,20 @@
             <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
                 <ul>
-                    <li><a href="bristol_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="regeneration_stages/bristol_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="regeneration_stages/bristol_design_and_planning.php">Design and Planning</a></li>
+                    <li><a href="glasgow_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="regeneration_stages/glasgow_resident_engagement.php">Pre-Plan Consultation</a></li>
+                    <li><a href="regeneration_stages/glasgow_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
-                    Bristol Council<br>
-                    The Old Council House, Corn Street<br>
-                    Bristol <br>
-                    BS1 1JG<br>
+                    Glasgow City Council<br>
+                    City Chambers<br>
+                    Glasgow <br>
+                    G2 1DU<br>
                     <br>
-                    Tel: 0117 903 8877<br>
+                    Tel: 0141 287 2000<br>
                 </address>
             </div>
 
@@ -111,19 +111,26 @@
 
         <div class="content three_quarter">
 
-            <h1>Bristol Council Regeneration</h1>
-            <p>Bristol is a city and county in South West England with a population of 454,200 in 2016. The district has the 10th-largest population in England. According to data from 2015, the city itself is the 8th-largest by population in the UK. The city borders North Somerset and South Gloucestershire, with the cities of Bath and Gloucester to the south-east and north-east, respectively.<p>
+            <h1>Glasgow Council Regeneration</h1>
+            <p>Glasgow is a port city on the River Clyde in Scotland's western Lowlands. It's famed for its Victorian and art nouveau architecture, a rich legacy of the city's 18th–20th-century prosperity due to trade and shipbuilding. Today it's a national cultural hub, home to institutions including the Scottish Opera, Scottish Ballet and National Theatre of Scotland, as well as acclaimed museums and a thriving music scene.<p>
                 <h1>Regeneration Projects<h1>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/filwood-green-business-park" class="button">Filwood Green Business Park</a></p>
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18614" class="button">Glasgow City Region City deal</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/gainsborough-square-regeneration-project" class="button">Gainsborough Square</a></p>
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18388" class="button">Housing Regeneration</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/knowle-west-regeneration-framework" class="button">Knowle West</a></p>
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18389" class="button">Transforming Communities</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations-for-business/south-bristol-housing-zone" class="button">South Bristol Housing</a></p>
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18275" class="button">City Centre Regeneration</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/city-centre-developments" class="button">City Centre</a></p>
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18302" class="button">Planning Regeneration Areas</a></p>
+
+            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=17879" class="button">Stalled Spaces</a></p>
+
+            <p><a href="http://glasgowcanalproject.com/" class="button">Canal Regeneration</a></p>
+
+            <p><a href="https://www.glasgow.gov.uk/CHttpHandler.ashx?id=32462&p=0" class="button">Oatlands Regeneration</a></p>
+
 
             <h1>                      <h1>
 

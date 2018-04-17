@@ -53,7 +53,7 @@
               <li><a href="/housing_project_2018/pages/council_store/barnet/barnet.php">Barnet</a></li>
               <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
               <li><a href="/housing_project_2018/pages/council_store/edinburgh/edinburgh.php">Edinburgh</a></li>
-              <li><a href="/housing_project_2018/pages/council_store/glasglow/glasglow.php">Glasglow</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/glasgow/glasgow.php">Glasgow</a></li>
               <li><a href="/housing_project_2018/pages/council_store/leeds/leeds.php">Leeds</a></li>
               <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
               <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough.php">Scarborough</a></li>
@@ -177,7 +177,7 @@
 
       // Using Strpos, its used to check for keywords within the content.
       $strLength = strlen($a);
-      $pos = strpos(strtolower($a), " ");
+      $pos = strpos(strtolower($a), "housing");
       #$pos2 = strpos(strtolower($a), " ");
 
       // If statement on if the keyword is present. Can be used for multiple keywords.
@@ -251,7 +251,8 @@
 
           if(response.message.length > 0){
              container.innerHTML += response.message;
-           } else {
+           }
+           else {
             //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
                 // Loads city into the URL on the next page.
@@ -376,7 +377,7 @@
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="/housing_project-2018/layout/scripts/jquery.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.min.js"></script>
 <script src="/housing_project_2018/layout/scripts/jquery.backtotop.js"></script>
 <script src="/housing_project_2018/layout/scripts/jquery.mobilemenu.js"></script>
 

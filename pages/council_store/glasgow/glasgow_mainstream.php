@@ -55,12 +55,6 @@
                         <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
                     </ul>
                 </li>
-                <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
-                    <ul>
-                        <li><a href="#">Regulations</a></li>
-                        <li><a href="#">Example</a></li>
-                    </ul>
-                </li>
                 <li><a href="#">Upload Data</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -74,9 +68,8 @@
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/glasgow/glasgow.php">Glasgow</a></li>
         </ul>
-
     </div>
 </div>
 
@@ -84,26 +77,25 @@
     <main class="hoc container clear">
         <!-- main body -->
 
-
         <div class="sidebar one_quarter first">
 
             <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
                 <ul>
-                    <li><a href="bristol_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="regeneration_stages/bristol_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="regeneration_stages/bristol_design_and_planning.php">Design and Planning</a></li>
+                    <li><a href="glasgow_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="regeneration_stages/glasgow_resident_engagement.php">Pre-Plan Consultation</a></li>
+                    <li><a href="regeneration_stages/glasgow_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
-                    Bristol Council<br>
-                    The Old Council House, Corn Street<br>
-                    Bristol <br>
-                    BS1 1JG<br>
+                    Glasgow City Council<br>
+                    City Chambers<br>
+                    Glasgow <br>
+                    G2 1DU<br>
                     <br>
-                    Tel: 0117 903 8877<br>
+                    Tel: 0141 287 2000<br>
                 </address>
             </div>
 
@@ -111,44 +103,46 @@
 
         <div class="content three_quarter">
 
-            <h1>Bristol Council Regeneration</h1>
-            <p>Bristol is a city and county in South West England with a population of 454,200 in 2016. The district has the 10th-largest population in England. According to data from 2015, the city itself is the 8th-largest by population in the UK. The city borders North Somerset and South Gloucestershire, with the cities of Bath and Gloucester to the south-east and north-east, respectively.<p>
-                <h1>Regeneration Projects<h1>
+            <h1>Glasgow Council Regeneration</h1>
+            <p> This page contains media publications based on Glasgow and its regeneration<p>
+            <h1>Main-Stream Media</h1>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/filwood-green-business-park" class="button">Filwood Green Business Park</a></p>
+            <h1 style="text-align:center">The Guardian</h1>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/gainsborough-square-regeneration-project" class="button">Gainsborough Square</a></p>
+            <div id="media">
+                <?php
+                // URL to the JSON using Rengeneration AND glasgow as keywords.
+                $json = file_get_contents("https://content.guardianapis.com/search?q=regeneration%20AND%20glasgow&from-date=2014-01-01&api-key=2c0e1a7c-7fcc-4a0f-a15e-73ee51d1e665");
+                // Stores the decoded data within a variable
+                $json_decoded = json_decode($json);
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/knowle-west-regeneration-framework" class="button">Knowle West</a></p>
-
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations-for-business/south-bristol-housing-zone" class="button">South Bristol Housing</a></p>
-
-            <p><a href="https://www.bristol.gov.uk/city-centre-developments" class="button">City Centre</a></p>
-
-            <h1>                      <h1>
-
-
-                    <em>Only GIF, JPG, and PNG files are allowed.</em>
-                    <form action="upload_image.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="myFile"/>
-                        <br/>
-                        <input type="submit" value="Upload"/>
-                    </form>
-                    <h1>                      <h1>
-                            <em>Only DOC and PDF files are allowed.</em>
-                            <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="filepdf" />
-                                <br/>
-                                <input type="submit" value="Upload" name="upload_pdf" />
-                            </form>
+                $info = array();
+                // Stores the specific objects we require into an array which is result.
+                foreach($json_decoded->response->results as $value){
+                    $info[] = $value;
+                }
+                // Allows for count
+                $i = 0;
+                // Loop to continue until if statement is met.
+                foreach($info as $value){
+                    if($i > 7){
+                        break;
+                    }
+                    else{
+                        // Prints the title and URL. This can be altered.
+                        echo "<h1>" . $value->webTitle . "</h1>";
+                        echo "<p>Link to PDF is <a href='" . $value->webUrl . "'>here</a>";
+                        $i++;
+                    }
+                }
 
 
+                ?>
+            </div>
         </div>
 
         <!-- / main body -->
         <div class="clear"></div>
-
-        <h1>                      <h1>
     </main>
 </div>
 
