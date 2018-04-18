@@ -41,7 +41,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         }
 
         // Creates description variable
-        $description = $response_decode->results[$i]->description;
+        //$description = $response_decode->results[$i]->description;
 
         // Creates link variable from JSON results
         $link = $response_decode ->results[$i]->link;
@@ -60,7 +60,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         // Find keyword in description before adding to results array
 
         $strLength = strlen($description);
-        $pos = strpos(strtolower($description), "development");
+        $pos = strpos(strtolower($description), " ");
 
         if($pos !== false) {
             $results[] = ($item);
@@ -68,6 +68,8 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         }
 
     }
+
+
 
     // Stores the incrementation value
     $start = $start + 20;

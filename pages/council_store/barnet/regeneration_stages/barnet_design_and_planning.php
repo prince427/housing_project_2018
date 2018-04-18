@@ -176,7 +176,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // Using Strpos, its used to check for keywords within the content.
                 $strLength = strlen($a);
-                $pos = strpos(strtolower($a), "development");
+                $pos = strpos(strtolower($a), " ");
                 #$pos2 = strpos(strtolower($a), " ");
 
                 // If statement on if the keyword is present. Can be used for multiple keywords.

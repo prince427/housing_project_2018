@@ -74,7 +74,7 @@
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/glasglow/glasglow.php">Glasglow</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/glasgow/glasgow.php">Glasgow</a></li>
         </ul>
 
     </div>

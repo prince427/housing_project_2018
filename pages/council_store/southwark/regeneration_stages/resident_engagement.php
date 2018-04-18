@@ -155,7 +155,7 @@
     }
     // Incrementation on the content. 
     for ($i = 0; $i < count($info); $i++) {
-      
+
       // Sets the timezone so the time is presentable. 
       date_default_timezone_set("Europe/London");
       
@@ -177,10 +177,11 @@
 
       // Using Strpos, its used to check for keywords within the content.
       $strLength = strlen($a);
-      $pos = strpos(strtolower($a), "housing");
+      $pos = strpos(strtolower($a), " ");
       #$pos2 = strpos(strtolower($a), " ");
 
-      // If statement on if the keyword is present. Can be used for multiple keywords.
+
+        // If statement on if the keyword is present. Can be used for multiple keywords.
       if($pos !== false) {
 
         echo '<div class="item">';
@@ -207,6 +208,8 @@
 
       }
     }
+
+
 
   ?>
 <div id="container" class="container">
@@ -263,7 +266,7 @@
           start = response.end;
 
         } else {
-          
+
         }
 
         requesting = false;
