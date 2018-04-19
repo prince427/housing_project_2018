@@ -177,7 +177,7 @@
 
       // Using Strpos, its used to check for keywords within the content.
       $strLength = strlen($a);
-      $pos = strpos(strtolower($a), " ");
+      $pos = strpos(strtolower($a), "housing");
       #$pos2 = strpos(strtolower($a), " ");
 
 
@@ -255,6 +255,9 @@
           if(response.message.length > 0){
              container.innerHTML += response.message;
            }
+           if(response.message = []){
+              null
+           }
            else {
             //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
@@ -265,8 +268,11 @@
 
           start = response.end;
 
-        } else {
 
+        }
+
+        else {
+            start = start + 20;
         }
 
         requesting = false;
