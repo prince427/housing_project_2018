@@ -80,7 +80,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough.php">Scarborough</a></li>
         </ul>
 
     </div>
@@ -95,23 +95,22 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
                 <ul>
-                    <li><a href="/housing_project_2018/pages/council_store/york/york_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/all_json.php">All available JSON files</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/york_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/york_design_and_planning.php">Design and Planning</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/scarborough/regeneration_stages/all_json.php">All available JSON files</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/scarborough/regeneration_stages/scarborough_resident_engagement.php">Pre-Plan Consultation</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/scarborough/regeneration_stages/scarborough_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
-                    York Council<br>
-                    York Customer Centre<br>
-                    West Offices<br>
-                    Station Rise<br>
-                    York<br>
-                    YO1 6GA<br>
+                    Scarborough Council<br>
+                    Customer First Centre<br>
+                    Town Hall<br>
+                    Scarborough <br>
+                    YO11 2HG<br>
                     <br>
-                    Tel: 01904 551550<br>
+                    Tel: 01723 232323<br>
                 </address>
             </div>
 
@@ -119,8 +118,8 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <div class="content three_quarter">
 
-            <h1>York Council Pre-plan consultation</h1>
-            <p>Searching keyword: 'Housing' within all JSON files available for York on gov.uk</p>
+            <h1>Scarborough Council All Government Json files</h1>
+            <p>Scroll to keep requesting information</p>
             <!-- Sets the style for the content -->
             <style type="text/css">
 
@@ -143,7 +142,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             $incrementURL = $_SESSION["incrementURL"];
 
             // Stores the content of the JSON along with a variable inside to allow the incrementation when loading content.
-            $json = file_get_contents("https://www.gov.uk/api/search.json?q=york&start=$incrementURL");
+            $json = file_get_contents("https://www.gov.uk/api/search.json?q=scarborough&start=$incrementURL");
 
             // Decodes the JSON.
             $json_decoded = json_decode($json);
@@ -179,7 +178,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // Using Strpos, its used to check for keywords within the content.
                 $strLength = strlen($a);
-                $pos = strpos(strtolower($a), "housing");
+                $pos = strpos(strtolower($a), " ");
                 #$pos2 = strpos(strtolower($a), " ");
 
                 // If statement on if the keyword is present. Can be used for multiple keywords.
@@ -261,7 +260,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                                     //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
                                     // Loads city into the URL on the next page.
-                                    loadMore("york");
+                                    loadMore("scarborough");
 
                                 }
 
@@ -280,7 +279,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     data.append("start", start);
                     data.append("city", city);
                     // Sends the data varaible into the other PHP so the process works.
-                    xmlhttp.open('POST', 'york_engagement_curl.php', true);
+                    xmlhttp.open('POST', 'all_json_curl.php', true);
                     xmlhttp.send(data);
                 }
 
@@ -295,7 +294,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // window.onload = function(){
                 //   if(!requesting){
-                //       loadMore("york");
+                //       loadMore("scarborough");
                 //      }
                 //  }
 
@@ -313,7 +312,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     if( yAxis >= containerHeight){
 
                         if(!requesting){
-                            loadMore("york");
+                            loadMore("scarborough");
                         }
                     }
                 }
@@ -382,11 +381,10 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="/housing_project-2018/layout/scripts/jquery.min.js"></script>
+<script src="/housing_project_2018/layout/scripts/jquery.min.js"></script>
 <script src="/housing_project_2018/layout/scripts/jquery.backtotop.js"></script>
 <script src="/housing_project_2018/layout/scripts/jquery.mobilemenu.js"></script>
 
 <script src="/housing_project_2018/layout/scripts/jquery.placeholder.min.js"></script>
 
 </body>
-</html>

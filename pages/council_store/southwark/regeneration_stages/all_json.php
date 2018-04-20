@@ -63,12 +63,12 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                 </li>
                 <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
                     <ul>
-                        <li><a href="#">Regulations</a></li>
+                        <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
                         <li><a href="#">Example</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Upload Data</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/housing_project_2018/uploader.php">Upload Data</a></li>
+                <li><a href="/housing_project_2018/contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
 

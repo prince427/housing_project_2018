@@ -119,8 +119,8 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <div class="content three_quarter">
 
-            <h1>York Council Pre-plan consultation</h1>
-            <p>Searching keyword: 'Housing' within all JSON files available for York on gov.uk</p>
+            <h1>York Council All Government Json files</h1>
+            <p>Scroll to keep requesting information</p>
             <!-- Sets the style for the content -->
             <style type="text/css">
 
@@ -179,7 +179,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // Using Strpos, its used to check for keywords within the content.
                 $strLength = strlen($a);
-                $pos = strpos(strtolower($a), "housing");
+                $pos = strpos(strtolower($a), " ");
                 #$pos2 = strpos(strtolower($a), " ");
 
                 // If statement on if the keyword is present. Can be used for multiple keywords.
@@ -280,7 +280,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     data.append("start", start);
                     data.append("city", city);
                     // Sends the data varaible into the other PHP so the process works.
-                    xmlhttp.open('POST', 'york_engagement_curl.php', true);
+                    xmlhttp.open('POST', 'all_json_curl.php', true);
                     xmlhttp.send(data);
                 }
 

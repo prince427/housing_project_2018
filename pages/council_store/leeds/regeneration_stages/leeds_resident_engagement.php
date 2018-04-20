@@ -63,12 +63,12 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                 </li>
                 <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
                     <ul>
-                        <li><a href="#">Regulations</a></li>
+                        <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
                         <li><a href="#">Example</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Upload Data</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/housing_project_2018/uploader.php">Upload Data</a></li>
+                <li><a href="/housing_project_2018/contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -96,6 +96,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <nav class="sdb_holder">
                 <ul>
                     <li><a href="/housing_project_2018/pages/council_store/leeds/leeds_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/all_json.php">All available JSON files</a></li>
                     <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/leeds_resident_engagement.php">Pre-Plan Consultation</a></li>
                     <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/leeds_design_and_planning.php">Design and Planning</a></li>
                 </ul>

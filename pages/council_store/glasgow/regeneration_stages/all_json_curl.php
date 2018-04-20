@@ -24,6 +24,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
     $response_decode = json_decode($curl);
 
 
+
     // var_dump($curl); ---- USED FOR TESTING
     // Sets incrementation values on the results.
     for($i = 0; $i < count($response_decode->results); $i++){
@@ -47,27 +48,30 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         $link = $response_decode ->results[$i]->link;
 
         // Converts date String into date format
-        $dateStr = (!empty($response_decode->results[$i]->public_timestamp)) ? $response_decode->results[$i]->public_timestamp : "";
+        $dateStr = (!empty($dateInfo)) ? $dateInfo : "";
 
         //Format date
         $formatDate = date("d F Y", strtotime($dateStr));
 
+        $description_non = "No description";
+        $link_non = "No link";
+        $time_non = "No time";
+
         // Stores the echo into a variable so it can be passed through.
-        $item = '<div class="item"><p>' .$description. ' </p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$formatDate.' </p></div>';
-
-
+        $item = '<div class="item"> <p>' .$description. ' </p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$formatDate.' </p></div>';
 
         // Find keyword in description before adding to results array
 
         $strLength = strlen($description);
-        $pos = strpos(strtolower($description), "development");
+        $pos = strpos(strtolower($description), " ");
 
         if($pos !== false) {
             $results[] = ($item);
-
         }
 
+
     }
+
 
     // Stores the incrementation value
     $start = $start + 20;
@@ -76,8 +80,12 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 } else {
     $response = ["success" => false, "message" => "Couldn't fetch data"];
 }
+
+
 // user print
 echo json_encode($response);
 
+//PHP script to sleep for 0.25 seconds so it doesn't overload server
+usleep(250000);
 
 ?>

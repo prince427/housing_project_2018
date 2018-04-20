@@ -54,8 +54,14 @@
                         <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Upload Data</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
+                    <ul>
+                        <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
+                        <li><a href="#">Example</a></li>
+                    </ul>
+                </li>
+                <li><a href="/housing_project_2018/uploader.php">Upload Data</a></li>
+                <li><a href="/housing_project_2018/contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -82,6 +88,7 @@
             <nav class="sdb_holder">
                 <ul>
                     <li><a href="york_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="regeneration_stages/all_json.php">All available JSON files</a></li>
                     <li><a href="regeneration_stages/york_resident_engagement.php">Pre-Plan Consultation</a></li>
                     <li><a href="regeneration_stages/york_design_and_planning.php">Design and Planning</a></li>
                 </ul>

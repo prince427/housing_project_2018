@@ -80,7 +80,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/leeds/leeds.php">Leeds</a></li>
         </ul>
 
     </div>
@@ -95,23 +95,21 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
                 <ul>
-                    <li><a href="/housing_project_2018/pages/council_store/york/york_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/all_json.php">All available JSON files</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/york_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/york/regeneration_stages/york_design_and_planning.php">Design and Planning</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/leeds/leeds_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/all_json.php">All available JSON files</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/leeds_resident_engagement.php">Pre-Plan Consultation</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/leeds/regeneration_stages/leeds_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
-                    York Council<br>
-                    York Customer Centre<br>
-                    West Offices<br>
-                    Station Rise<br>
-                    York<br>
-                    YO1 6GA<br>
+                    Leeds City Council<br>
+                    Calverley Street<br>
+                    Leeds <br>
+                    LS1 1UR<br>
                     <br>
-                    Tel: 01904 551550<br>
+                    Tel: 0113 222 4412<br>
                 </address>
             </div>
 
@@ -119,8 +117,8 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <div class="content three_quarter">
 
-            <h1>York Council Pre-plan consultation</h1>
-            <p>Searching keyword: 'Housing' within all JSON files available for York on gov.uk</p>
+            <h1>Leeds Council All Government Json files</h1>
+            <p>Scroll to keep requesting information</p>
             <!-- Sets the style for the content -->
             <style type="text/css">
 
@@ -143,7 +141,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             $incrementURL = $_SESSION["incrementURL"];
 
             // Stores the content of the JSON along with a variable inside to allow the incrementation when loading content.
-            $json = file_get_contents("https://www.gov.uk/api/search.json?q=york&start=$incrementURL");
+            $json = file_get_contents("https://www.gov.uk/api/search.json?q=leeds&start=$incrementURL");
 
             // Decodes the JSON.
             $json_decoded = json_decode($json);
@@ -179,7 +177,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // Using Strpos, its used to check for keywords within the content.
                 $strLength = strlen($a);
-                $pos = strpos(strtolower($a), "housing");
+                $pos = strpos(strtolower($a), " ");
                 #$pos2 = strpos(strtolower($a), " ");
 
                 // If statement on if the keyword is present. Can be used for multiple keywords.
@@ -261,7 +259,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                                     //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
                                     // Loads city into the URL on the next page.
-                                    loadMore("york");
+                                    loadMore("leeds");
 
                                 }
 
@@ -280,7 +278,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     data.append("start", start);
                     data.append("city", city);
                     // Sends the data varaible into the other PHP so the process works.
-                    xmlhttp.open('POST', 'york_engagement_curl.php', true);
+                    xmlhttp.open('POST', 'all_json_curl.php', true);
                     xmlhttp.send(data);
                 }
 
@@ -295,7 +293,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // window.onload = function(){
                 //   if(!requesting){
-                //       loadMore("york");
+                //       loadMore("leeds");
                 //      }
                 //  }
 
@@ -313,7 +311,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     if( yAxis >= containerHeight){
 
                         if(!requesting){
-                            loadMore("york");
+                            loadMore("leeds");
                         }
                     }
                 }

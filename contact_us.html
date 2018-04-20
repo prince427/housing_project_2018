@@ -42,7 +42,7 @@
         <nav id="mainav" class="fl_right">
             <ul class="clear">
                 <li class="active"><a href="/housing_project_2018/index.html">Home</a></li>
-                <li><a class="drop" href="/housing_project_2018/pages/locations.html">Locations</a>
+                <li><a class="drop" href="#">Locations</a>
                     <ul>
                         <li><a href="/housing_project_2018/pages/council_store/barnet/barnet.php">Barnet</a></li>
                         <li><a href="/housing_project_2018/pages/council_store/bristol/bristol.php">Bristol</a></li>
@@ -61,21 +61,22 @@
                         <li><a href="#">Example</a></li>
                     </ul>
                 </li>
-                <li><a href="/housing_project_2018/uploader.php">Upload Data</a></li>
-                <li><a href="/housing_project_2018/contact_us.html">Contact Us</a></li>
+                <li><a href="uploader.php">Upload Data</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
 
     </header>
 </div>
 
-<div class="wrapper bgded overlay" style="background-image:url('/housing_project_2018/images/demo/backgrounds/01.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('/housing_project_2018//images/demo/backgrounds/01.jpg');">
     <div id="breadcrumb" class="hoc clear">
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
+            <li><a href="/housing_project_2018/pages/contact_us.html">Contact Us</a></li>
         </ul>
+
     </div>
 </div>
 
@@ -83,73 +84,30 @@
     <main class="hoc container clear">
         <!-- main body -->
 
+
         <div class="sidebar one_quarter first">
 
-            <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
-                <ul>
-                    <li><a href="salford_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="regeneration_stages/all_json.php">All available JSON files</a></li>
-                    <li><a href="regeneration_stages/salford_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="regeneration_stages/salford_design_and_planning.php">Design and Planning</a></li>
-                </ul>
+
             </nav>
             <div class="sdb_holder">
-                <h6>Contact Details</h6>
-                <address>
-                    Salford Council<br>
-                    Swinton<br>
-                    Manchester <br>
-                    M27 5AW<br>
-                    <br>
-                    Tel: 0161 793 2500<br>
-                </address>
+
+
             </div>
 
         </div>
 
         <div class="content three_quarter">
 
-            <h1>Salford Council Regeneration</h1>
-            <p> This page contains media publications based on Salford and its regeneration<p>
-            <h1>Main-Stream Media</h1>
+            <h1>Contact Us</h1>
+            <p>Our information: </p>
+            <p>Coming soon...</p>
 
-            <h1 style="text-align:center">The Guardian</h1>
-
-            <div id="media">
-                <?php
-                // URL to the JSON using Rengeneration AND salford as keywords.
-                $json = file_get_contents("https://content.guardianapis.com/search?q=regeneration%20AND%20salford&from-date=2014-01-01&api-key=2c0e1a7c-7fcc-4a0f-a15e-73ee51d1e665");
-                // Stores the decoded data within a variable
-                $json_decoded = json_decode($json);
-
-                $info = array();
-                // Stores the specific objects we require into an array which is result.
-                foreach($json_decoded->response->results as $value){
-                    $info[] = $value;
-                }
-                // Allows for count
-                $i = 0;
-                // Loop to continue until if statement is met.
-                foreach($info as $value){
-                    if($i > 7){
-                        break;
-                    }
-                    else{
-                        // Prints the title and URL. This can be altered.
-                        echo "<h1>" . $value->webTitle . "</h1>";
-                        echo "<p>Link to PDF is <a href='" . $value->webUrl . "'>here</a>";
-                        $i++;
-                    }
-                }
-
-
-                ?>
-            </div>
         </div>
 
         <!-- / main body -->
         <div class="clear"></div>
+
     </main>
 </div>
 
@@ -201,7 +159,7 @@
 <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
 
-        <p class="fl_left">Copyright &copy; 2018 <a href="#">Kieran Amrane-Rendall & Nazim Ahmed</a></p>
+        <p class="fl_left">Copyright &copy; 2017 <a href="#">Kieran Amrane-Rendall & Nazim Ahmed</a></p>
     </div>
 </div>
 

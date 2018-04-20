@@ -40,7 +40,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
             $description = 'No description';
         }
 
-        // Creates description variable
+        // Description variable causes error when comes across JSON without description, commented out
         //$description = $response_decode->results[$i]->description;
 
         // Creates link variable from JSON results

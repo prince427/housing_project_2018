@@ -40,6 +40,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
             $description = 'No description';
         }
 
+
         // Description variable causes error when comes across JSON without description, commented out
         //$description = $response_decode->results[$i]->description;
 
@@ -60,12 +61,13 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         // Find keyword in description before adding to results array
 
         $strLength = strlen($description);
-        $pos = strpos(strtolower($description), "development");
+        $pos = strpos(strtolower($description), " ");
 
         if($pos !== false) {
             $results[] = ($item);
 
         }
+
 
     }
 
@@ -79,5 +81,5 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 // user print
 echo json_encode($response);
 
-
-?>
+//PHP script to sleep for 0.25 seconds so it doesn't overload server
+usleep(250000);

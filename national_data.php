@@ -52,14 +52,14 @@
               <li><a href="/housing_project_2018/pages/council_store/york/york.php">York</a></li>
           </ul>
         </li>
-        <li><a class="drop" href="#">National Data</a>
+        <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
           <ul>
-            <li><a href="national_data.php">Regulations</a></li>
+            <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
             <li><a href="#">Example</a></li>
           </ul>
         </li>
-        <li><a href="pages/upload.php">Upload Data</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="uploader.php">Upload Data</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
       </ul>
     </nav>
 
