@@ -81,7 +81,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <ul>
             <li><a href="/housing_project_2018/index.html">Home</a></li>
-            <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
+            <li><a href="/housing_project_2018/pages/council_store/manchester/manchester.php">Manchester</a></li>
         </ul>
 
     </div>
@@ -96,21 +96,23 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <h6>Regeneration Stages</h6>
             <nav class="sdb_holder">
                 <ul>
-                    <li><a href="/housing_project_2018/pages/council_store/salford/salford_mainstream.php">Main-Stream Media</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/salford/regeneration_stages/all_json.php">All available JSON files</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/salford/regeneration_stages/salford_resident_engagement.php">Pre-Plan Consultation</a></li>
-                    <li><a href="/housing_project_2018/pages/council_store/salford/regeneration_stages/salford_design_and_planning.php">Design and Planning</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/manchester/manchester_mainstream.php">Main-Stream Media</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/manchester/regeneration_stages/all_json.php">All available JSON files</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/manchester/regeneration_stages/manchester_resident_engagement.php">Pre-Plan Consultation</a></li>
+                    <li><a href="/housing_project_2018/pages/council_store/manchester/regeneration_stages/manchester_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
-                    Salford Council<br>
-                    Swinton<br>
+                    Manchester City Council<br>
+                    The Customer Service Centre<br>
+                    Manchester town hall extension<br>
+                    Mount Street<br>
                     Manchester <br>
-                    M27 5AW<br>
+                    M60 2LA<br>
                     <br>
-                    Tel: 0161 793 2500<br>
+                    Tel: 0161 234 5000<br>
                 </address>
             </div>
 
@@ -118,8 +120,8 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
         <div class="content three_quarter">
 
-            <h1>Salford Council Pre-plan consultation</h1>
-            <p>Searching keyword: 'Housing' within all JSON files available for Salford on gov.uk</p>
+            <h1>Manchester City Council Pre-plan consultation</h1>
+            <p>Searching keyword: 'Housing' within all JSON files available for Manchester on gov.uk</p>
             <!-- Sets the style for the content -->
             <style type="text/css">
 
@@ -142,7 +144,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             $incrementURL = $_SESSION["incrementURL"];
 
             // Stores the content of the JSON along with a variable inside to allow the incrementation when loading content.
-            $json = file_get_contents("https://www.gov.uk/api/search.json?q=salford&start=$incrementURL");
+            $json = file_get_contents("https://www.gov.uk/api/search.json?q=manchester&start=$incrementURL");
 
             // Decodes the JSON.
             $json_decoded = json_decode($json);
@@ -260,7 +262,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                                     //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
                                     // Loads city into the URL on the next page.
-                                    loadMore("salford");
+                                    loadMore("manchester");
 
                                 }
 
@@ -279,7 +281,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     data.append("start", start);
                     data.append("city", city);
                     // Sends the data varaible into the other PHP so the process works.
-                    xmlhttp.open('POST', 'salford_engagement_curl.php', true);
+                    xmlhttp.open('POST', 'manchester_engagement_curl.php', true);
                     xmlhttp.send(data);
                 }
 
@@ -294,7 +296,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // window.onload = function(){
                 //   if(!requesting){
-                //       loadMore("salford");
+                //       loadMore("manchester");
                 //      }
                 //  }
 
@@ -312,7 +314,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     if( yAxis >= containerHeight){
 
                         if(!requesting){
-                            loadMore("salford");
+                            loadMore("manchester");
                         }
                     }
                 }

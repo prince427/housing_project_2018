@@ -46,6 +46,7 @@
               <li><a href="/housing_project_2018/pages/council_store/edinburgh/edinburgh.php">Edinburgh</a></li>
               <li><a href="/housing_project_2018/pages/council_store/glasgow/glasgow.php">Glasgow</a></li>
               <li><a href="/housing_project_2018/pages/council_store/leeds/leeds.php">Leeds</a></li>
+              <li><a href="/housing_project_2018/pages/council_store/manchester/manchester.php">Manchester</a></li>
               <li><a href="/housing_project_2018/pages/council_store/salford/salford.php">Salford</a></li>
               <li><a href="/housing_project_2018/pages/council_store/scarborough/scarborough.php">Scarborough</a></li>
               <li><a href="/housing_project_2018/pages/council_store/southwark/southwark.php">Southwark</a></li>
