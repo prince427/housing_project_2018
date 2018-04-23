@@ -257,7 +257,7 @@
              container.innerHTML += response.message;
            }
            if(response.message = []){
-              null
+              null;
            }
            else {
             //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
