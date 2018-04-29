@@ -121,7 +121,8 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
         <div class="content three_quarter">
 
             <h1>Manchester City Council All Government Json files</h1>
-            <p>Scroll to keep requesting information</p>
+            <p>This page contains all JSON files this council has stored on Gov.</p>
+            <p>Scroll to keep requesting information. </p>
             <!-- Sets the style for the content -->
             <style type="text/css">
 
