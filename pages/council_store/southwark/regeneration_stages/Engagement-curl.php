@@ -23,8 +23,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	// Decoding the JSON.
 	$response_decode = json_decode($curl);
 
-
-
 	// var_dump($curl); ---- USED FOR TESTING
 	// Sets incrementation values on the results.
 	for($i = 0; $i < count($response_decode->results); $i++){
@@ -68,13 +66,14 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 	    if($pos !== false) {
             $results[] = ($item);
         }
-
 	   
 	}
 
 
 	// Stores the incrementation value 
     $start = $start + 20;
+
+
 	// Pushes the results and start array to allow for a print.
 	$response = ["success" => true, "message" => $results, "end" => $start];
 } else {

@@ -115,6 +115,7 @@
 
             <h1>Bristol Council Regeneration</h1>
             <p>Bristol is a city and county in South West England with a population of 454,200 in 2016. The district has the 10th-largest population in England. According to data from 2015, the city itself is the 8th-largest by population in the UK. The city borders North Somerset and South Gloucestershire, with the cities of Bath and Gloucester to the south-east and north-east, respectively.<p>
+            <p>Bristol's commitment to open data: <a href="https://www.bristol.gov.uk/data-protection-foi/open-data">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/filwood-green-business-park" class="button">Filwood Green Business Park</a></p>
@@ -143,6 +144,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

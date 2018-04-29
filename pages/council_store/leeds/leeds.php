@@ -115,6 +115,7 @@
 
             <h1>Leeds Council Regeneration</h1>
             <p>Leeds is a city in the northern English county of Yorkshire. On the south bank of the River Aire, the Royal Armouries houses the national collection of arms and artillery. Across the river, the redeveloped industrial area around Call Lane is famed for bars and live music venues under converted railway arches. Leeds Kirkgate Market features hundreds of indoor and outdoor stalls.<p>
+            <p>Leeds commitment to open data: <a href="https://www.leeds.gov.uk/opendata">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.leeds.gov.uk/residents/neighbourhoods-and-community/neighbourhood-regeneration" class="button">Neighbourhood regeneration</a></p>
@@ -140,6 +141,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

@@ -116,6 +116,7 @@
 
             <h1>Scarborough Council Regeneration</h1>
             <p>Scarborough is a resort town on England’s North Sea coast. Its 2 bays with sandy beaches are split by a headland bearing the 12th-century Scarborough Castle. The Victorian Central Tramway funicular train links the town centre with South Bay and its harbour. The Rotunda Museum explores local coastal geology. Scarborough SEA LIFE Sanctuary’s marine displays and the Peasholm Park Japanese gardens are behind North Bay.<p>
+            <p>Scarborough's commitment to open data: <a href="https://www.scarborough.gov.uk/opendata">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.scarborough.gov.uk/latest-news/regeneration-ideas-eastborough" class="button">Regeneration Ideas for Eastborough</a></p>
@@ -141,6 +142,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

@@ -117,6 +117,7 @@
 
             <h1>Manchester City Council Regeneration</h1>
             <p>Manchester is a major city in the northwest of England with a rich industrial heritage. The Castlefield conservation area’s 18th-century canal system recalls the city’s days as a textile powerhouse, and visitors can trace this history at the interactive Museum of Science & Industry. The revitalised Salford Quays dockyards now house the Daniel Libeskind-designed Imperial War Museum North and the Lowry cultural centre.<p>
+            <p>Manchester's commitment to open data: <a href="http://open.manchester.gov.uk/">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="http://www.manchester.gov.uk/info/500104/north_manchester_regeneration" class="button">North Manchester regeneration</a></p>
@@ -147,6 +148,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

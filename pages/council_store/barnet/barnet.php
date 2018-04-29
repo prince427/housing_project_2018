@@ -115,6 +115,7 @@
 
             <h1>Barnet Council Regeneration</h1>
             <p>The London Borough of Barnet is a suburban London borough in North London, England, with some districts within North West London forming part of Outer London.<p>
+            <p>Barnet's commitment to open data: <a href="https://www.barnet.gov.uk/citizen-home/council-and-democracy/transparency-and-open-data.html">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.barnet.gov.uk/citizen-home/delivering-for-barnet/brent-cross-cricklewood.html" class="button">Brent Cross Cricklewood</a></p>
@@ -152,6 +153,34 @@
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
 
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
         </div>
 

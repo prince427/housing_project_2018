@@ -116,6 +116,7 @@
 
             <h1>Edinburgh Council Regeneration</h1>
             <p>Edinburgh is Scotland's compact, hilly capital. It has a medieval Old Town and elegant Georgian New Town with gardens and neoclassical buildings. Looming over the city is Edinburgh Castle, home to Scotland’s crown jewels and the Stone of Destiny, used in the coronation of Scottish rulers. Arthur’s Seat is an imposing peak in Holyrood Park with sweeping views, and Calton Hill is topped with monuments and memorials.<p>
+            <p>Edinburgh's commitment to open data: <a href="http://www.edinburgh.gov.uk/info/20032/access_to_information/1011/open_data">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/835/leith_programme" class="button">Leith programme</a></p>
@@ -142,6 +143,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

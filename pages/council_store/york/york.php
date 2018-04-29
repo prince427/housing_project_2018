@@ -117,6 +117,7 @@
 
             <h1>York Council Regeneration</h1>
             <p>York is a walled city in northeast England that was founded by the ancient Romans. Its huge 13th-century Gothic cathedral, York Minster, has medieval stained glass and 2 functioning bell towers. The City Walls form a walkway on both sides of the River Ouse. The Monk Bar gate houses an exhibition tracing the life of 15th-century Plantagenet King Richard III.<p>
+            <p>York's commitment to open data: <a href="https://www.york.gov.uk/info/20168/information_management/1045/open_data/1">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.york.gov.uk/info/20048/major_developments/1008/castle_piccadilly" class="button">Major developments in Castle Gateway</a></p>
@@ -154,6 +155,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

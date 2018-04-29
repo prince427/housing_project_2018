@@ -230,6 +230,7 @@
   var loading = document.getElementById('loading');
   var start = 20;
 
+
   // Prevent sending ajax multiple requests
   var requesting = false;
 

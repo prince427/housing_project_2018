@@ -115,6 +115,7 @@
 
             <h1>Salford Council Regeneration</h1>
             <p>Salford Quays is a contemporary cultural and entertainment hub with gleaming architecture and waterside dining. The Lowry arts centre stages drama and ballet, and shows works by local 20th-century artist L.S. Lowry, who was known for depicting everyday city life. Big-name brands sell discounted fashion at the Lowry Outlet mall. Across the canal, the Imperial War Museum North often hosts family events.<p>
+            <p>Salford's commitment to open data: <a href="https://www.salford.gov.uk/your-council/corporate-information/open-data/">Link</a></p>
                 <h1>Regeneration Projects<h1>
 
             <p><a href="https://www.salford.gov.uk/planning-building-and-regeneration/regeneration/projects/salford-central/" class="button">Salford Central</a></p>
@@ -143,6 +144,35 @@
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
+
+                            <h3> Uploaded files </h3>
+
+
+                            <?php
+
+                            $dir_path = "uploads_image";
+                            $extensions_array = array('jpg', 'png', 'jpeg');
+
+                            if(is_dir($dir_path));
+                            {
+
+                                $files = scandir($dir_path);
+
+                                for ($i = 0; $i < count($files); $i++) {
+                                    if ($files[$i] != '.' && $files[$i] !== '..') {
+                                        // get file name
+                                        echo "File name -> $files[$i]<br>";
+
+                                        // get file extension
+                                        $file = pathinfo($files[$i]);
+                                        $extensions = $file['extension'];
+                                        echo "File Extension-> $extensions<br>";
+                                        echo "<img src='$dir_path$files[$i]'";
+                                    }
+                                }
+                            }
+
+                            ?>
 
 
         </div>

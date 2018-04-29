@@ -23,7 +23,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
     // Decoding the JSON.
     $response_decode = json_decode($curl);
 
-
     // var_dump($curl); ---- USED FOR TESTING
     // Sets incrementation values on the results.
     for($i = 0; $i < count($response_decode->results); $i++){

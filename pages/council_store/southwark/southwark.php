@@ -116,6 +116,7 @@
 
       <h1>Southwark London Borough Council Regeneration</h1>
       <p>Southwark is fast becoming one of London's most dynamic boroughs with 40 per cent currently under regeneration and developments valued at around £4 billion.<p>
+        <p>Southwark's commitment to open data: <a href="https://www.southwark.gov.uk/council-and-democracy/open-data">Link</a></p>
       <h1>Regeneration Projects<h1>
 
         <p><a href="http://www.southwark.gov.uk/regeneration/regeneration-projects/camberwell-regeneration" class="button">Camberwell regeneration</a></p>
@@ -144,6 +145,35 @@
           <br/>      
         <input type="submit" value="Upload" name="upload_pdf" />
     </form>
+
+        <h3> Uploaded files </h3>
+
+
+        <?php
+
+       $dir_path = "uploads_image";
+       $extensions_array = array('jpg', 'png', 'jpeg');
+
+       if(is_dir($dir_path));
+        {
+
+            $files = scandir($dir_path);
+
+            for ($i = 0; $i < count($files); $i++) {
+                if ($files[$i] != '.' && $files[$i] !== '..') {
+                    // get file name
+                    echo "File name -> $files[$i]<br>";
+
+                    // get file extension
+                    $file = pathinfo($files[$i]);
+                    $extensions = $file['extension'];
+                    echo "File Extension-> $extensions<br>";
+                    echo "<img src='$dir_path$files[$i]'";
+                }
+            }
+        }
+
+        ?>
 
 
     </div>
