@@ -119,7 +119,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
         <div class="content three_quarter">
 
             <h1>Salford Council Design and planning</h1>
-            <p>Searching keyword: 'Development' within all JSON files available for Salford on gov.uk</p>
+            <p>Searching keyword: 'Plan' within all JSON files available for Salford on gov.uk</p>
             <p>Scroll to keep requesting information. </p>
             <!-- Sets the style for the content -->
             <style type="text/css">
@@ -179,7 +179,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 // Using Strpos, its used to check for keywords within the content.
                 $strLength = strlen($a);
-                $pos = strpos(strtolower($a), "development");
+                $pos = strpos(strtolower($a), "plan");
                 #$pos2 = strpos(strtolower($a), " ");
 
                 // If statement on if the keyword is present. Can be used for multiple keywords.

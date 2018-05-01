@@ -61,7 +61,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         // Find keyword in description before adding to results array
 
         $strLength = strlen($description);
-        $pos = strpos(strtolower($description), "development");
+        $pos = strpos(strtolower($description), "plan");
 
         if($pos !== false) {
             $results[] = ($item);
