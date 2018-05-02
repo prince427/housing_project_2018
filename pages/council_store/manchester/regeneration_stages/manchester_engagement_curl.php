@@ -56,7 +56,6 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
         $item = '<div class="item"><p>' .$description. ' </p> <p>Link is: <a href="https://gov.uk'. $link .'"> here</a></p> <p> Published date: '.$formatDate.' </p></div>';
 
 
-
         // Find keyword in description before adding to results array
 
         $strLength = strlen($description);

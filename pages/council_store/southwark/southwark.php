@@ -141,7 +141,7 @@
 <h1>                      <h1>
       <em>Only DOC and PDF files are allowed.</em>
     <form action="upload_document.php" method="post" enctype="multipart/form-data">    
-        <input type="file" name="filepdf" />
+        <input type="file" name="myFile" />
           <br/>      
         <input type="submit" value="Upload" name="upload_pdf" />
     </form>
@@ -152,9 +152,20 @@
         <?php
 
        $dir_path = "uploads_image";
-       $extensions_array = array('jpg', 'png', 'jpeg');
+       $dir_path_2 = "uploads_documents";
 
-       if(is_dir($dir_path));
+        if(is_dir($dir_path_2));
+        {
+            $files_2 = scandir($dir_path_2);
+            for ($i = 0; $i < count($files_2); $i++) {
+                if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
+                    // get file name
+                    echo "<p> File name -> $files_2[$i]</p>";
+                }
+            }
+        }
+
+        if(is_dir($dir_path));
         {
 
             $files = scandir($dir_path);
@@ -166,9 +177,7 @@
 
                     // get file extension
                     $file = pathinfo($files[$i]);
-                    $extensions = $file['extension'];
-                    echo "File Extension-> $extensions<br>";
-                    echo "<img src='$dir_path$files[$i]'";
+                    echo "<img src='$dir_path$files[$i]'<br>";
                 }
             }
         }

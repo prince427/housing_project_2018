@@ -14,10 +14,10 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_FILES["myFile"])) {
         exit;
     }
     // verify the file type
-    $fileType = basename($_FILES["myFile"]["tmp_name"]);
-    $allowed = array(application/pdf, text/plain);
+    $fileType = mime_content_type($_FILES["myFile"]["tmp_name"]);
+    $allowed = array("application/pdf", "plain/txt", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
     if (!in_array($fileType, $allowed)) {
-        echo "<p>File type is not permitted.</p>";
+        echo "<p>File type is not permitted. .$fileType.</p>";
         exit;
     }
 
