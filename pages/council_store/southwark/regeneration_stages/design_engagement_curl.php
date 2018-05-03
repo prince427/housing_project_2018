@@ -3,8 +3,8 @@
 // Sets the timezone.
 date_default_timezone_set("Europe/London");
 // Required variables
-$response = [];
-$results = [];
+$response = array();
+$results = array();
 $start = null;
 $city = null;
 
@@ -73,9 +73,9 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
     // Stores the incrementation value
     $start = $start + 20;
     // Pushes the results and start array to allow for a print.
-    $response = ["success" => true, "message" => $results, "end" => $start];
+    $response = array("success" => true, "message" => $results, "end" => $start);
 } else {
-    $response = ["success" => false, "message" => "Couldn't fetch data"];
+    $response = array("success" => false, "message" => "Couldn't fetch data");
 }
 
 
