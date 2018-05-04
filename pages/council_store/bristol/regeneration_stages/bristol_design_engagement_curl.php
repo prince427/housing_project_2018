@@ -79,4 +79,8 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 // user print
 echo json_encode($response);
 
+if(empty($results)){
+    $response = array("success" => true, "message" => "<p> Keyword not found in record </p>", "end"=> $start);
+}
+
 ?>

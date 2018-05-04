@@ -78,6 +78,10 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
     $response = array("success" => false, "message" => "Couldn't fetch data");
 }
 
+if(empty($results)){
+    $response = array("success" => true, "message" => "<p> Keyword not found in record </p>", "end"=> $start);
+}
+
 
 // user print
 echo json_encode($response);

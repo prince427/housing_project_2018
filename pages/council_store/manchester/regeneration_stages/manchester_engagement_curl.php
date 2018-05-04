@@ -69,6 +69,7 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 
     }
 
+
     // Stores the incrementation value
     $start = $start + 20;
     // Pushes the results and start array to allow for a print.
@@ -76,5 +77,10 @@ if(isset($_POST['start'], $_POST['city']) && !empty($_POST['start']) && !empty($
 } else {
     $response = array("success" => false, "message" => "Couldn't fetch data");
 }
+
+    if(empty($results)){
+    $response = array("success" => true, "message" => "<p> Keyword not found in record </p>", "end"=> $start);
+    }
+
 // user print
 echo json_encode($response);
