@@ -139,7 +139,7 @@
                     <h1>                      <h1>
                             <em>Only DOC and PDF files are allowed.</em>
                             <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="filepdf" />
+                                <input type="file" name="myFile" />
                                 <br/>
                                 <input type="submit" value="Upload" name="upload_pdf" />
                             </form>
