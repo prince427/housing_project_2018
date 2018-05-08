@@ -99,6 +99,14 @@
 
             <h1>National Data</h1>
             <h1>Regulations</h1>
+            <style type="text/css">
+                .item {
+                    border: 2px solid #222;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                }
+
+            </style>
 
             <?php
             $json = file_get_contents("https://www.gov.uk/api/search.json?q=regeneration+regulations");
@@ -137,6 +145,7 @@
 
                 if ($pos OR $pos2 == true)
                 {
+                    echo '<div class="item">';
                     echo "<p>" . $a . "</h1>";
                     $dateStr = (!empty($info[$i]->public_timestamp)) ? $info[$i]->public_timestamp : "";
                     echo "<p>Link is <a href='https://gov.uk" . $info[$i]->link . "'>here</a>";
@@ -148,6 +157,7 @@
                     {
                         echo "<p> ";
                     }
+                    echo '</div>';
                 }
             }
 

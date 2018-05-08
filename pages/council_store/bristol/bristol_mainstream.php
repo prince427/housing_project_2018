@@ -95,6 +95,9 @@
                     <li><a href="regeneration_stages/bristol_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
+
+            <h6><li><a href ="/housing_project_2018/pages/council_store/bristol/regeneration_stages/bristol_api.php">Bristol Council API</a></li></h6>
+
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
@@ -133,6 +136,7 @@
                 $i = 0;
                 // Loop to continue until if statement is met.
                 foreach($info as $value){
+
                     if($i > 7){
                         break;
                     }
@@ -142,6 +146,7 @@
                         echo "<p>Link to PDF is <a href='" . $value->webUrl . "'>here</a>";
                         $i++;
                     }
+
                 }
 
                 ?>

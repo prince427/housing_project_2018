@@ -103,6 +103,9 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     <li><a href="/housing_project_2018/pages/council_store/bristol/regeneration_stages/bristol_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
+
+            <h6><li><a href ="/housing_project_2018/pages/council_store/bristol/regeneration_stages/bristol_api.php">Bristol Council API</a></li></h6>
+
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
@@ -8,6 +9,7 @@
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -96,6 +98,9 @@
                     <li><a href="/housing_project_2018/pages/council_store/bristol/regeneration_stages/bristol_design_and_planning.php">Design and Planning</a></li>
                 </ul>
             </nav>
+
+            <h6><li><a href ="/housing_project_2018/pages/council_store/bristol/regeneration_stages/bristol_api.php">Bristol Council API</a></li></h6>
+
             <div class="sdb_holder">
                 <h6>Contact Details</h6>
                 <address>
@@ -112,12 +117,10 @@
 
         <div class="content three_quarter">
 
-            <h1>Bristol Council Pre-plan consultation</h1>
-            <p>Searching keyword: 'Consultation' within all JSON files available for Bristol on gov.uk</p>
-            <p>Scroll to keep requesting information. </p>
+            <h1>Bristol Council API</h1>
+            <p>Displays information from a few keywords from the Bristol API</p>
             <!-- Sets the style for the content -->
             <style type="text/css">
-
                 .item {
                     border: 2px solid #222;
                     padding: 10px;
@@ -129,141 +132,47 @@
                     font-weight: 700;
                     color: red;
                 }
-
             </style>
 
             <?php
 
             // Stores the content of the JSON along with a variable inside to allow the incrementation when loading content.
             $json = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Regeneration");
+            $json_2 = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Resident");
 
             // Decodes the JSON.
             $json_decoded = json_decode($json, true);
-            //var_dump($json_decoded); -- Testing Usage
+            $json_decoded_2 = json_decode($json_2, true);
+
+            echo "<p> Regeneration search </p>";
+
+            echo '<div class="item">';
 
             echo $json_decoded['datasets']['0']['metas']['title'];
             echo $json_decoded['datasets']['0']['metas']['description'];
             echo $json_decoded['datasets']['0']['metas']['attributions'];
 
+            echo '</div>';
+
+            echo "<p> Resident search </p>";
+
+            echo '<div class="item">';
+            echo $json_decoded_2['datasets']['2']['metas']['title'];
+            echo $json_decoded_2['datasets']['2']['metas']['description'];
+            echo $json_decoded_2['datasets']['2']['metas']['attributions'];
+
+            echo '</div>';
 
             ?>
             <div id="container" class="container">
 
             </div>
-            <p id="loading" style="display: none">Loading More...</p>
-
-            <!-- Javascript Libraries, loaded Via CDN (JQUERY && INFINITE-SCROLL) -->
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <!-- <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script> -->
-            <script type="text/javascript">
-
-                // Wrapper content
-                var container = document.getElementById('container');
-                var loading = document.getElementById('loading');
-                var start = 20;
-
-                // Prevent sending ajax multiple requests
-                var requesting = false;
-
-                // Function storing city
-                function loadMore(city){
-
-                    requesting = true;
-                    toggleProgress();
-
-                    if(window.XMLHttpRequest){
-                        var xmlhttp = new XMLHttpRequest();
-                    } else {
-                        var xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
-                    }
-
-                    xmlhttp.onreadystatechange = function(){
-
-                        // Checking the correct statuses.
-                        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-
-                            var response = JSON.parse(xmlhttp.responseText);
-
-                            if(response.success){
-
-                                if(response.message.length > 0){
-                                    container.innerHTML += response.message;
-                                }
-                                if(response.message = []){
-                                    null
-                                }
-                                else {
-                                    //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
-
-                                    // Loads city into the URL on the next page.
-                                    loadMore("bristol");
-
-                                }
-
-                                start = response.end;
-
-                            } else {
-
-                            }
-
-                            requesting = false;
-                            toggleProgress();
-                        }
-                    }
-                    // Stores the content of city and start into data.
-                    var data = new FormData();
-                    data.append("start", start);
-                    data.append("city", city);
-                    // Sends the data varaible into the other PHP so the process works.
-                    xmlhttp.open('POST', 'bristol_engagement_curl.php', true);
-                    xmlhttp.send(data);
-                }
-
-                //toggle loading
-                function toggleProgress() {
-                    if(loading.style.display == 'none'){
-                        loading.style.display = 'block';
-                    } else {
-                        loading.style.display = 'none';
-                    }
-                }
-
-                // window.onload = function(){
-                //   if(!requesting){
-                //       loadMore("bristol");
-                //      }
-                //  }
-
-                // Listening for the scroll event as its being scrolled
-                window.onscroll = function(){
-
-                    // Height of content
-                    var containerHeight = container.offsetHeight;
-
-                    // User vertical scroll position on page
-                    var verticalScroll = window.pageYOffset;
-
-                    var yAxis = verticalScroll + window.innerHeight;
-
-                    if( yAxis >= containerHeight){
-
-                        if(!requesting){
-                            loadMore("bristol");
-                        }
-                    }
-                }
-
-            </script>
-
             <!-- / main body -->
             <div class="clear"></div>
 
             <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -314,7 +223,6 @@
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
