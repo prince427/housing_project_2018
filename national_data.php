@@ -56,7 +56,6 @@
         <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
           <ul>
             <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
-            <li><a href="#">Example</a></li>
           </ul>
         </li>
         <li><a href="uploader.php">Upload Data</a></li>
@@ -198,7 +197,7 @@
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
 
-    <p class="fl_left">Copyright &copy; 2018 <a href="#">Kieran Amrane-Rendall & Nazim Ahmed</a></p>
+    <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
   </div>
 </div>
 

@@ -59,7 +59,6 @@
                 <li><a class="drop" href="/housing_project_2018/national_data.php">National Data</a>
                     <ul>
                         <li><a href="/housing_project_2018/national_data.php">Regulations</a></li>
-                        <li><a href="#">Example</a></li>
                     </ul>
                 </li>
                 <li><a href="/housing_project_2018/uploader.php">Upload Data</a></li>
@@ -149,7 +148,7 @@
                         <input type="submit" value="Upload"/>
                     </form>
                     <h1>                      <h1>
-                            <em>Only DOC and PDF files are allowed.</em>
+                            <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
                             <form action="upload_document.php" method="post" enctype="multipart/form-data">
                                 <input type="file" name="myFile" />
                                 <br/>
@@ -163,34 +162,46 @@
 
                             $dir_path = "uploads_image";
                             $dir_path_2 = "uploads_documents";
+                            $link = scandir($dir_path_2);
+                            $imagesDirectory = "uploads_image/";
 
                             if(is_dir($dir_path_2));
                             {
                                 $files_2 = scandir($dir_path_2);
                                 for ($i = 0; $i < count($files_2); $i++) {
                                     if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
-                                        // get file name
-                                        echo "<p> File name -> $files_2[$i]</p>";
+                                        //get link
+                                        echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
                                     }
                                 }
                             }
 
-                            if(is_dir($dir_path));
+                            if(is_dir($imagesDirectory))
                             {
+                                $opendirectory = opendir($imagesDirectory);
 
-                                $files = scandir($dir_path);
+                                while (($image = readdir($opendirectory)) !== false)
+                                {
+                                    if(($image == '.') || ($image == '..'))
+                                    {
+                                        continue;
+                                    }
 
-                                for ($i = 0; $i < count($files); $i++) {
-                                    if ($files[$i] != '.' && $files[$i] !== '..') {
-                                        // get file name
-                                        echo "File name -> $files[$i]<br>";
+                                    $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
 
-                                        // get file extension
-                                        $file = pathinfo($files[$i]);
-                                        echo "<img src='$dir_path$files[$i]'<br>";
+                                    if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                    {
+                                        echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
                                     }
                                 }
+
+                                closedir($opendirectory);
+
                             }
+
+
+
+
 
                             ?>
 
@@ -252,7 +263,7 @@
 <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
 
-        <p class="fl_left">Copyright &copy; 2018 <a href="#">Kieran Amrane-Rendall & Nazim Ahmed</a></p>
+        <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
 
