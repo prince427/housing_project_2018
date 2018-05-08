@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -84,7 +86,6 @@
     <main class="hoc container clear">
         <!-- main body -->
 
-
         <div class="sidebar one_quarter first">
 
             <h6>Regeneration Stages</h6>
@@ -113,87 +114,80 @@
         <div class="content three_quarter">
 
             <h1>Bristol Council Regeneration</h1>
-            <p>Bristol is a city and county in South West England with a population of 454,200 in 2016. The district has the 10th-largest population in England. According to data from 2015, the city itself is the 8th-largest by population in the UK. The city borders North Somerset and South Gloucestershire, with the cities of Bath and Gloucester to the south-east and north-east, respectively.<p>
+            <p>Bristol is a city and county in South West England with a population of 454,200 in 2016. The district has the 10th-largest population in England. According to data from 2015, the city itself is the 8th-largest by population in the UK. The city borders North Somerset and South Gloucestershire, with the cities of Bath and Gloucester to the south-east and north-east, respectively.</p>
             <p>Bristol's commitment to open data: <a href="https://www.bristol.gov.uk/data-protection-foi/open-data">Link</a></p>
-                <h1>Regeneration Projects<h1>
+            <h1>Regeneration Projects<h1>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/filwood-green-business-park" class="button">Filwood Green Business Park</a></p>
+                    <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/filwood-green-business-park" class="button">Filwood Green Business Park</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/gainsborough-square-regeneration-project" class="button">Gainsborough Square</a></p>
+                    <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/gainsborough-square-regeneration-project" class="button">Gainsborough Square</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/knowle-west-regeneration-framework" class="button">Knowle West</a></p>
+                    <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations/knowle-west-regeneration-framework" class="button">Knowle West</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations-for-business/south-bristol-housing-zone" class="button">South Bristol Housing</a></p>
+                    <p><a href="https://www.bristol.gov.uk/planning-and-building-regulations-for-business/south-bristol-housing-zone" class="button">South Bristol Housing</a></p>
 
-            <p><a href="https://www.bristol.gov.uk/city-centre-developments" class="button">City Centre</a></p>
+                    <p><a href="https://www.bristol.gov.uk/city-centre-developments" class="button">City Centre</a></p>
 
-            <h1>                      <h1>
-
-
-                    <em>Only GIF, JPG, and PNG files are allowed.</em>
-                    <form action="upload_image.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="myFile"/>
-                        <br/>
-                        <input type="submit" value="Upload"/>
-                    </form>
                     <h1>                      <h1>
-                            <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
-                            <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="myFile" />
+
+                            <em>Only GIF, JPG, and PNG files are allowed.</em>
+                            <form action="upload_image.php" method="post" enctype="multipart/form-data">
+                                <input type="file" name="myFile"/>
                                 <br/>
-                                <input type="submit" value="Upload" name="upload_pdf" />
+                                <input type="submit" value="Upload"/>
                             </form>
+                            <h1>                      <h1>
+                                    <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
+                                    <form action="upload_document.php" method="post" enctype="multipart/form-data">
+                                        <input type="file" name="myFile" />
+                                        <br/>
+                                        <input type="submit" value="Upload" name="upload_pdf" />
+                                    </form>
 
-                            <h3> Uploaded files </h3>
+                                    <h3> Uploaded files </h3>
 
+                                    <?php
 
-                            <?php
+                                    $dir_path = "uploads_image";
+                                    $dir_path_2 = "uploads_documents";
+                                    $link = scandir($dir_path_2);
+                                    $imagesDirectory = "uploads_image/";
 
-                            $dir_path = "uploads_image";
-                            $dir_path_2 = "uploads_documents";
-                            $link = scandir($dir_path_2);
-                            $imagesDirectory = "uploads_image/";
-
-                            if(is_dir($dir_path_2));
-                            {
-                                $files_2 = scandir($dir_path_2);
-                                for ($i = 0; $i < count($files_2); $i++) {
-                                    if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
-                                        //get link
-                                        echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
-                                    }
-                                }
-                            }
-
-                            if(is_dir($imagesDirectory))
-                            {
-                                $opendirectory = opendir($imagesDirectory);
-
-                                while (($image = readdir($opendirectory)) !== false)
-                                {
-                                    if(($image == '.') || ($image == '..'))
+                                    if(is_dir($dir_path_2));
                                     {
-                                        continue;
+                                        $files_2 = scandir($dir_path_2);
+                                        for ($i = 0; $i < count($files_2); $i++) {
+                                            if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
+                                                //get link
+                                                echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
+                                            }
+                                        }
                                     }
 
-                                    $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
-
-                                    if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                    if(is_dir($imagesDirectory))
                                     {
-                                        echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                        $opendirectory = opendir($imagesDirectory);
+
+                                        while (($image = readdir($opendirectory)) !== false)
+                                        {
+                                            if(($image == '.') || ($image == '..'))
+                                            {
+                                                continue;
+                                            }
+
+                                            $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
+
+                                            if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                            {
+                                                echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                            }
+                                        }
+
+                                        closedir($opendirectory);
+
                                     }
-                                }
 
-                                closedir($opendirectory);
-
-                            }
-
-
-
-
-
-                            ?>
-
+                                    ?>
 
         </div>
 
@@ -203,8 +197,6 @@
         <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -255,7 +247,6 @@
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

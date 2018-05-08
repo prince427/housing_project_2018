@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -112,7 +114,8 @@
         <div class="content three_quarter">
 
             <h1>York Council Regeneration</h1>
-            <p> This page contains media publications based on York and its regeneration<p>
+            <p> This page contains media publications based on York and its regeneration
+            <p>
             <h1>Main-Stream Media</h1>
 
             <h1 style="text-align:center">The Guardian</h1>
@@ -144,7 +147,6 @@
                     }
                 }
 
-
                 ?>
             </div>
         </div>
@@ -153,8 +155,6 @@
         <div class="clear"></div>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -167,8 +167,8 @@
                         Street Name &amp; Number, Town, Postcode/Zip
                     </address>
                 </li>
-                <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
-                    +00 (123) 456 7890</li>
+                <li><i class="fa fa-phone"></i> +00 (123) 456 7890
+                    <br> +00 (123) 456 7890</li>
                 <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
                 <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
             </ul>
@@ -206,7 +206,6 @@
     </div>
 </div>
 
-
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="/housing_project_2018/layout/scripts/jquery.min.js"></script>
@@ -216,4 +215,5 @@
 <script src="/housing_project_2018/layout/scripts/jquery.placeholder.min.js"></script>
 
 </body>
+
 </html>

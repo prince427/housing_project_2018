@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -84,7 +86,6 @@
     <main class="hoc container clear">
         <!-- main body -->
 
-
         <div class="sidebar one_quarter first">
 
             <h6>Regeneration Stages</h6>
@@ -113,94 +114,86 @@
         <div class="content three_quarter">
 
             <h1>Glasgow Council Regeneration</h1>
-            <p>Glasgow is a port city on the River Clyde in Scotland's western Lowlands. It's famed for its Victorian and art nouveau architecture, a rich legacy of the city's 18th–20th-century prosperity due to trade and shipbuilding. Today it's a national cultural hub, home to institutions including the Scottish Opera, Scottish Ballet and National Theatre of Scotland, as well as acclaimed museums and a thriving music scene.<p>
+            <p>Glasgow is a port city on the River Clyde in Scotland's western Lowlands. It's famed for its Victorian and art nouveau architecture, a rich legacy of the city's 18th–20th-century prosperity due to trade and shipbuilding. Today it's a national cultural hub, home to institutions including the Scottish Opera, Scottish Ballet and National Theatre of Scotland, as well as acclaimed museums and a thriving music scene.</p>
             <p>Glasgow's commitment to open data: <a href="https://data.glasgow.gov.uk/pages/freedom-of-information">Link</a></p>
-                <h1>Regeneration Projects<h1>
+            <h1>Regeneration Projects<h1>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18614" class="button">Glasgow City Region City deal</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18614" class="button">Glasgow City Region City deal</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18388" class="button">Housing Regeneration</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18388" class="button">Housing Regeneration</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18389" class="button">Transforming Communities</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18389" class="button">Transforming Communities</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18275" class="button">City Centre Regeneration</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18275" class="button">City Centre Regeneration</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18302" class="button">Planning Regeneration Areas</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=18302" class="button">Planning Regeneration Areas</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=17879" class="button">Stalled Spaces</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/index.aspx?articleid=17879" class="button">Stalled Spaces</a></p>
 
-            <p><a href="http://glasgowcanalproject.com/" class="button">Canal Regeneration</a></p>
+                    <p><a href="http://glasgowcanalproject.com/" class="button">Canal Regeneration</a></p>
 
-            <p><a href="https://www.glasgow.gov.uk/CHttpHandler.ashx?id=32462&p=0" class="button">Oatlands Regeneration</a></p>
+                    <p><a href="https://www.glasgow.gov.uk/CHttpHandler.ashx?id=32462&p=0" class="button">Oatlands Regeneration</a></p>
 
-
-            <h1>                      <h1>
-
-
-                    <em>Only GIF, JPG, and PNG files are allowed.</em>
-                    <form action="upload_image.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="myFile"/>
-                        <br/>
-                        <input type="submit" value="Upload"/>
-                    </form>
                     <h1>                      <h1>
-                            <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
-                            <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="myFile" />
+
+                            <em>Only GIF, JPG, and PNG files are allowed.</em>
+                            <form action="upload_image.php" method="post" enctype="multipart/form-data">
+                                <input type="file" name="myFile"/>
                                 <br/>
-                                <input type="submit" value="Upload" name="upload_pdf" />
+                                <input type="submit" value="Upload"/>
                             </form>
+                            <h1>                      <h1>
+                                    <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
+                                    <form action="upload_document.php" method="post" enctype="multipart/form-data">
+                                        <input type="file" name="myFile" />
+                                        <br/>
+                                        <input type="submit" value="Upload" name="upload_pdf" />
+                                    </form>
 
-                            <h3> Uploaded files </h3>
+                                    <h3> Uploaded files </h3>
 
+                                    <?php
 
-                            <?php
+                                    $dir_path = "uploads_image";
+                                    $dir_path_2 = "uploads_documents";
+                                    $link = scandir($dir_path_2);
+                                    $imagesDirectory = "uploads_image/";
 
-                            $dir_path = "uploads_image";
-                            $dir_path_2 = "uploads_documents";
-                            $link = scandir($dir_path_2);
-                            $imagesDirectory = "uploads_image/";
-
-                            if(is_dir($dir_path_2));
-                            {
-                                $files_2 = scandir($dir_path_2);
-                                for ($i = 0; $i < count($files_2); $i++) {
-                                    if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
-                                        //get link
-                                        echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
-                                    }
-                                }
-                            }
-
-                            if(is_dir($imagesDirectory))
-                            {
-                                $opendirectory = opendir($imagesDirectory);
-
-                                while (($image = readdir($opendirectory)) !== false)
-                                {
-                                    if(($image == '.') || ($image == '..'))
+                                    if(is_dir($dir_path_2));
                                     {
-                                        continue;
+                                        $files_2 = scandir($dir_path_2);
+                                        for ($i = 0; $i < count($files_2); $i++) {
+                                            if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
+                                                //get link
+                                                echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
+                                            }
+                                        }
                                     }
 
-                                    $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
-
-                                    if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                    if(is_dir($imagesDirectory))
                                     {
-                                        echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                        $opendirectory = opendir($imagesDirectory);
+
+                                        while (($image = readdir($opendirectory)) !== false)
+                                        {
+                                            if(($image == '.') || ($image == '..'))
+                                            {
+                                                continue;
+                                            }
+
+                                            $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
+
+                                            if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                            {
+                                                echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                            }
+                                        }
+
+                                        closedir($opendirectory);
+
                                     }
-                                }
 
-                                closedir($opendirectory);
-
-                            }
-
-
-
-
-
-                            ?>
-
+                                    ?>
 
         </div>
 
@@ -210,8 +203,6 @@
         <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -262,7 +253,6 @@
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

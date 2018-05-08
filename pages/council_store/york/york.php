@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -84,7 +86,6 @@
     <main class="hoc container clear">
         <!-- main body -->
 
-
         <div class="sidebar one_quarter first">
 
             <h6>Regeneration Stages</h6>
@@ -115,96 +116,88 @@
         <div class="content three_quarter">
 
             <h1>York Council Regeneration</h1>
-            <p>York is a walled city in northeast England that was founded by the ancient Romans. Its huge 13th-century Gothic cathedral, York Minster, has medieval stained glass and 2 functioning bell towers. The City Walls form a walkway on both sides of the River Ouse. The Monk Bar gate houses an exhibition tracing the life of 15th-century Plantagenet King Richard III.<p>
+            <p>York is a walled city in northeast England that was founded by the ancient Romans. Its huge 13th-century Gothic cathedral, York Minster, has medieval stained glass and 2 functioning bell towers. The City Walls form a walkway on both sides of the River Ouse. The Monk Bar gate houses an exhibition tracing the life of 15th-century Plantagenet King Richard III.</p>
             <p>York's commitment to open data: <a href="https://www.york.gov.uk/info/20168/information_management/1045/open_data/1">Link</a></p>
-                <h1>Regeneration Projects<h1>
+            <h1>Regeneration Projects<h1>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1008/castle_piccadilly" class="button">Major developments in Castle Gateway</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1008/castle_piccadilly" class="button">Major developments in Castle Gateway</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1009/former_british_sugar_factory_manor_school" class="button">Major developments at the former British Sugar Factory/Manor School</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1009/former_british_sugar_factory_manor_school" class="button">Major developments at the former British Sugar Factory/Manor School</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1012/germany_beck" class="button">Major developments at Germany Beck</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1012/germany_beck" class="button">Major developments at Germany Beck</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1711/derwenthorpe_major_development" class="button">Major developments in Derwenthorpe</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1711/derwenthorpe_major_development" class="button">Major developments in Derwenthorpe</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1018/university_of_york_heslington_east_campus" class="button">Major developments at University of York: Heslington East Campus</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1018/university_of_york_heslington_east_campus" class="button">Major developments at University of York: Heslington East Campus</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1014/hungate" class="button">Major developments in Hungate</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1014/hungate" class="button">Major developments in Hungate</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1006/nestl%C3%A9_south" class="button">Major developments at Nestlé South</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1006/nestl%C3%A9_south" class="button">Major developments at Nestlé South</a></p>
 
-            <p><a href="https://www.york.gov.uk/info/20048/major_developments/1019/york_central" class="button">Major developments at York Central</a></p>
+                    <p><a href="https://www.york.gov.uk/info/20048/major_developments/1019/york_central" class="button">Major developments at York Central</a></p>
 
-            <p><a href="https://www.york.gov.uk/guildhallproject" class="button">Major developments at The Guildhall</a></p>
+                    <p><a href="https://www.york.gov.uk/guildhallproject" class="button">Major developments at The Guildhall</a></p>
 
-
-            <h1>                      <h1>
-
-
-                    <em>Only GIF, JPG, and PNG files are allowed.</em>
-                    <form action="upload_image.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="myFile"/>
-                        <br/>
-                        <input type="submit" value="Upload"/>
-                    </form>
                     <h1>                      <h1>
-                            <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
-                            <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="myFile" />
+
+                            <em>Only GIF, JPG, and PNG files are allowed.</em>
+                            <form action="upload_image.php" method="post" enctype="multipart/form-data">
+                                <input type="file" name="myFile"/>
                                 <br/>
-                                <input type="submit" value="Upload" name="upload_pdf" />
+                                <input type="submit" value="Upload"/>
                             </form>
+                            <h1>                      <h1>
+                                    <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
+                                    <form action="upload_document.php" method="post" enctype="multipart/form-data">
+                                        <input type="file" name="myFile" />
+                                        <br/>
+                                        <input type="submit" value="Upload" name="upload_pdf" />
+                                    </form>
 
-                            <h3> Uploaded files </h3>
+                                    <h3> Uploaded files </h3>
 
+                                    <?php
 
-                            <?php
+                                    $dir_path = "uploads_image";
+                                    $dir_path_2 = "uploads_documents";
+                                    $link = scandir($dir_path_2);
+                                    $imagesDirectory = "uploads_image/";
 
-                            $dir_path = "uploads_image";
-                            $dir_path_2 = "uploads_documents";
-                            $link = scandir($dir_path_2);
-                            $imagesDirectory = "uploads_image/";
-
-                            if(is_dir($dir_path_2));
-                            {
-                                $files_2 = scandir($dir_path_2);
-                                for ($i = 0; $i < count($files_2); $i++) {
-                                    if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
-                                        //get link
-                                        echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
-                                    }
-                                }
-                            }
-
-                            if(is_dir($imagesDirectory))
-                            {
-                                $opendirectory = opendir($imagesDirectory);
-
-                                while (($image = readdir($opendirectory)) !== false)
-                                {
-                                    if(($image == '.') || ($image == '..'))
+                                    if(is_dir($dir_path_2));
                                     {
-                                        continue;
+                                        $files_2 = scandir($dir_path_2);
+                                        for ($i = 0; $i < count($files_2); $i++) {
+                                            if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
+                                                //get link
+                                                echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
+                                            }
+                                        }
                                     }
 
-                                    $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
-
-                                    if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                    if(is_dir($imagesDirectory))
                                     {
-                                        echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                        $opendirectory = opendir($imagesDirectory);
+
+                                        while (($image = readdir($opendirectory)) !== false)
+                                        {
+                                            if(($image == '.') || ($image == '..'))
+                                            {
+                                                continue;
+                                            }
+
+                                            $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
+
+                                            if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                            {
+                                                echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                            }
+                                        }
+
+                                        closedir($opendirectory);
+
                                     }
-                                }
 
-                                closedir($opendirectory);
-
-                            }
-
-
-
-
-
-                            ?>
-
+                                    ?>
 
         </div>
 
@@ -214,8 +207,6 @@
         <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -266,7 +257,6 @@
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

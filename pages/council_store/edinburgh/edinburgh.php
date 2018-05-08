@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -84,7 +86,6 @@
     <main class="hoc container clear">
         <!-- main body -->
 
-
         <div class="sidebar one_quarter first">
 
             <h6>Regeneration Stages</h6>
@@ -114,85 +115,78 @@
         <div class="content three_quarter">
 
             <h1>Edinburgh Council Regeneration</h1>
-            <p>Edinburgh is Scotland's compact, hilly capital. It has a medieval Old Town and elegant Georgian New Town with gardens and neoclassical buildings. Looming over the city is Edinburgh Castle, home to Scotland’s crown jewels and the Stone of Destiny, used in the coronation of Scottish rulers. Arthur’s Seat is an imposing peak in Holyrood Park with sweeping views, and Calton Hill is topped with monuments and memorials.<p>
+            <p>Edinburgh is Scotland's compact, hilly capital. It has a medieval Old Town and elegant Georgian New Town with gardens and neoclassical buildings. Looming over the city is Edinburgh Castle, home to Scotland’s crown jewels and the Stone of Destiny, used in the coronation of Scottish rulers. Arthur’s Seat is an imposing peak in Holyrood Park with sweeping views, and Calton Hill is topped with monuments and memorials.</p>
             <p>Edinburgh's commitment to open data: <a href="http://www.edinburgh.gov.uk/info/20032/access_to_information/1011/open_data">Link</a></p>
-                <h1>Regeneration Projects<h1>
+            <h1>Regeneration Projects<h1>
 
-            <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/835/leith_programme" class="button">Leith programme</a></p>
+                    <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/835/leith_programme" class="button">Leith programme</a></p>
 
-            <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/96/the_canal_strategy" class="button">Union Canal Strategy</a></p>
+                    <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/96/the_canal_strategy" class="button">Union Canal Strategy</a></p>
 
-            <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/250/the_royal_mile_project" class="button">The Royal Mile Project</a></p>
+                    <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/250/the_royal_mile_project" class="button">The Royal Mile Project</a></p>
 
-            <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/93/town_centres" class="button">Town Centres</a></p>
+                    <p><a href="http://www.edinburgh.gov.uk/info/20182/regeneration/93/town_centres" class="button">Town Centres</a></p>
 
-            <h1>                      <h1>
-
-
-                    <em>Only GIF, JPG, and PNG files are allowed.</em>
-                    <form action="upload_image.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="myFile"/>
-                        <br/>
-                        <input type="submit" value="Upload"/>
-                    </form>
                     <h1>                      <h1>
-                            <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
-                            <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                                <input type="file" name="myFile" />
+
+                            <em>Only GIF, JPG, and PNG files are allowed.</em>
+                            <form action="upload_image.php" method="post" enctype="multipart/form-data">
+                                <input type="file" name="myFile"/>
                                 <br/>
-                                <input type="submit" value="Upload" name="upload_pdf" />
+                                <input type="submit" value="Upload"/>
                             </form>
+                            <h1>                      <h1>
+                                    <em>Only PDF, PLAIN TEXT, DOC AND DOCX files are allowed.</em>
+                                    <form action="upload_document.php" method="post" enctype="multipart/form-data">
+                                        <input type="file" name="myFile" />
+                                        <br/>
+                                        <input type="submit" value="Upload" name="upload_pdf" />
+                                    </form>
 
-                            <h3> Uploaded files </h3>
+                                    <h3> Uploaded files </h3>
 
+                                    <?php
 
-                            <?php
+                                    $dir_path = "uploads_image";
+                                    $dir_path_2 = "uploads_documents";
+                                    $link = scandir($dir_path_2);
+                                    $imagesDirectory = "uploads_image/";
 
-                            $dir_path = "uploads_image";
-                            $dir_path_2 = "uploads_documents";
-                            $link = scandir($dir_path_2);
-                            $imagesDirectory = "uploads_image/";
-
-                            if(is_dir($dir_path_2));
-                            {
-                                $files_2 = scandir($dir_path_2);
-                                for ($i = 0; $i < count($files_2); $i++) {
-                                    if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
-                                        //get link
-                                        echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
-                                    }
-                                }
-                            }
-
-                            if(is_dir($imagesDirectory))
-                            {
-                                $opendirectory = opendir($imagesDirectory);
-
-                                while (($image = readdir($opendirectory)) !== false)
-                                {
-                                    if(($image == '.') || ($image == '..'))
+                                    if(is_dir($dir_path_2));
                                     {
-                                        continue;
+                                        $files_2 = scandir($dir_path_2);
+                                        for ($i = 0; $i < count($files_2); $i++) {
+                                            if ($files_2[$i] != '.' && $files_2[$i] !== '..') {
+                                                //get link
+                                                echo'<p>File: <a href="uploads_documents/'.$files_2[$i].'">'.$files_2[$i].'</a>';
+                                            }
+                                        }
                                     }
 
-                                    $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
-
-                                    if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                    if(is_dir($imagesDirectory))
                                     {
-                                        echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                        $opendirectory = opendir($imagesDirectory);
+
+                                        while (($image = readdir($opendirectory)) !== false)
+                                        {
+                                            if(($image == '.') || ($image == '..'))
+                                            {
+                                                continue;
+                                            }
+
+                                            $imgFileType = pathinfo($image,PATHINFO_EXTENSION);
+
+                                            if(($imgFileType == 'jpg') || ($imgFileType == 'png') || ($imgFileType = 'gif'))
+                                            {
+                                                echo "<p>Image: <img src='uploads_image/".$image."' width='200'></p>";
+                                            }
+                                        }
+
+                                        closedir($opendirectory);
+
                                     }
-                                }
 
-                                closedir($opendirectory);
-
-                            }
-
-
-
-
-
-                            ?>
-
+                                    ?>
 
         </div>
 
@@ -202,8 +196,6 @@
         <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -254,7 +246,6 @@
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

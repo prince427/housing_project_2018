@@ -6,6 +6,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
@@ -13,6 +14,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -122,7 +124,6 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <p>Scroll to keep requesting information. </p>
             <!-- Sets the style for the content -->
             <style type="text/css">
-
                 .item {
                     border: 2px solid #222;
                     padding: 10px;
@@ -134,7 +135,6 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                     font-weight: 700;
                     color: red;
                 }
-
             </style>
 
             <?php
@@ -220,7 +220,6 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <!-- <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script> -->
             <script type="text/javascript">
-
                 // Wrapper content
                 var container = document.getElementById('container');
                 var loading = document.getElementById('loading');
@@ -230,33 +229,32 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                 var requesting = false;
 
                 // Function storing city
-                function loadMore(city){
+                function loadMore(city) {
 
                     requesting = true;
                     toggleProgress();
 
-                    if(window.XMLHttpRequest){
+                    if (window.XMLHttpRequest) {
                         var xmlhttp = new XMLHttpRequest();
                     } else {
                         var xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
                     }
 
-                    xmlhttp.onreadystatechange = function(){
+                    xmlhttp.onreadystatechange = function() {
 
                         // Checking the correct statuses.
-                        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                             var response = JSON.parse(xmlhttp.responseText);
 
-                            if(response.success){
+                            if (response.success) {
 
-                                if(response.message.length > 0){
+                                if (response.message.length > 0) {
                                     container.innerHTML += response.message;
                                 }
-                                if(response.message = []){
+                                if (response.message = []) {
                                     null
-                                }
-                                else {
+                                } else {
                                     //container.innerHTML += '<div class="item"><p>Still no result</p></div>';
 
                                     // Loads city into the URL on the next page.
@@ -285,7 +283,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                 //toggle loading
                 function toggleProgress() {
-                    if(loading.style.display == 'none'){
+                    if (loading.style.display == 'none') {
                         loading.style.display = 'block';
                     } else {
                         loading.style.display = 'none';
@@ -299,7 +297,7 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
                 //  }
 
                 // Listening for the scroll event as its being scrolled
-                window.onscroll = function(){
+                window.onscroll = function() {
 
                     // Height of content
                     var containerHeight = container.offsetHeight;
@@ -309,14 +307,13 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
 
                     var yAxis = verticalScroll + window.innerHeight;
 
-                    if( yAxis >= containerHeight){
+                    if (yAxis >= containerHeight) {
 
-                        if(!requesting){
+                        if (!requesting) {
                             loadMore("bristol");
                         }
                     }
                 }
-
             </script>
 
             <!-- / main body -->
@@ -325,8 +322,6 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
             <h1>                      <h1>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -377,7 +372,6 @@ $_SESSION["incrementURL"] = ((isset($_SESSION["incrementURL"])) ? $_SESSION["inc
         <p class="fl_left">Copyright &copy; 2018 <a href="#">Nazim Ahmed</a></p>
     </div>
 </div>
-
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

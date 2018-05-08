@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <title>Regeneration Research Platform | Pages | Sidebar Left</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/housing_project_2018/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
+
 <body id="top">
 
 <div class="wrapper row0">
@@ -111,40 +113,55 @@
         <div class="content three_quarter">
 
             <h1>Barnet London Borough Council Regeneration</h1>
-            <p> This page contains media publications based on Barnet and its regeneration<p>
+            <p> This page contains media publications based on Barnet and its regeneration</p>
             <h1>Main-Stream Media</h1>
 
             <h1 style="text-align:center">The Guardian</h1>
 
             <div id="media">
                 <?php
-                // URL to the JSON using Rengeneration AND Barnet as keywords.
-                $json = file_get_contents("https://content.guardianapis.com/search?q=regeneration%20AND%20barnet&from-date=2014-01-01&api-key=2c0e1a7c-7fcc-4a0f-a15e-73ee51d1e665");
-                // Stores the decoded data within a variable
-                $json_decoded = json_decode($json);
 
+                // URL to the JSON using Regeneration AND Barnet as keywords.
+
+                $json = file_get_contents("https://content.guardianapis.com/search?q=regeneration%20AND%20barnet&from-date=2014-01-01&api-key=2c0e1a7c-7fcc-4a0f-a15e-73ee51d1e665");
+
+                // Stores the decoded data within a variable
+
+                $json_decoded = json_decode($json);
                 $info = array();
+
                 // Stores the specific objects we require into an array which is result.
-                foreach($json_decoded->response->results as $value){
+
+                foreach($json_decoded->response->results as $value)
+                {
                     $info[] = $value;
                 }
+
                 // Allows for count
+
                 $i = 0;
+
                 // Loop to continue until if statement is met.
-                foreach($info as $value){
-                    if($i > 7){
+
+                foreach($info as $value)
+                {
+                    if ($i > 7)
+                    {
                         break;
                     }
-                    else{
+                    else
+                    {
+
                         // Prints the title and URL. This can be altered.
+
                         echo "<h1>" . $value->webTitle . "</h1>";
                         echo "<p>Link to PDF is <a href='" . $value->webUrl . "'>here</a>";
                         $i++;
                     }
                 }
 
-
                 ?>
+
             </div>
         </div>
 
@@ -152,8 +169,6 @@
         <div class="clear"></div>
     </main>
 </div>
-
-
 
 <div class="wrapper row4">
     <footer id="footer" class="hoc clear">
@@ -166,8 +181,8 @@
                         Street Name &amp; Number, Town, Postcode/Zip
                     </address>
                 </li>
-                <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
-                    +00 (123) 456 7890</li>
+                <li><i class="fa fa-phone"></i> +00 (123) 456 7890
+                    <br> +00 (123) 456 7890</li>
                 <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
                 <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
             </ul>
@@ -205,7 +220,6 @@
     </div>
 </div>
 
-
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="/housing_project_2018/layout/scripts/jquery.min.js"></script>
@@ -215,4 +229,5 @@
 <script src="/housing_project_2018/layout/scripts/jquery.placeholder.min.js"></script>
 
 </body>
+
 </html>
