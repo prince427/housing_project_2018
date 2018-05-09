@@ -136,34 +136,91 @@
 
             <?php
 
-            // Stores the content of the JSON along with a variable inside to allow the incrementation when loading content.
-            $json = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Regeneration");
+            // Get JSON values for 'regeneration', 'resident' and 'plan' on the Bristol API
+            $json   = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Regeneration");
             $json_2 = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Resident");
+            $json_3 = file_get_contents("https://opendata.bristol.gov.uk/api/datasets/1.0/search/?q=Plan");
 
-            // Decodes the JSON.
-            $json_decoded = json_decode($json, true);
+            // Decodes the JSONs
+            $json_decoded   = json_decode($json, true);
             $json_decoded_2 = json_decode($json_2, true);
+            $json_decoded_3 = json_decode($json_3, true);
+
+            $count   = $json_decoded['nhits'];
+            $count_2 = $json_decoded_2['nhits'];
+            $count_3 = $json_decoded_3['nhits'];
+
+            // Prints out the regeneration results
 
             echo "<p> Regeneration search </p>";
 
-            echo '<div class="item">';
+            for ($i = 0; $i < $count; $i++) {
 
-            echo $json_decoded['datasets']['0']['metas']['title'];
-            echo $json_decoded['datasets']['0']['metas']['description'];
-            echo $json_decoded['datasets']['0']['metas']['attributions'];
+                if (!empty($json_decoded['datasets'][$i]['metas']['title'])) {
+                    echo '<div class="item">';
+                    if (!empty($json_decoded['datasets'][$i]['metas']['title'])) {
+                        echo "<p>" . $json_decoded['datasets'][$i]['metas']['title'] . "</p>";
+                    }
 
-            echo '</div>';
+                    if (!empty($json_decoded['datasets'][$i]['metas']['description'])) {
+                        echo "<p>" . $json_decoded['datasets'][$i]['metas']['description'] . "<p>";
+                    }
+                    if (!empty($json_decoded['datasets'][$i]['metas']['attributions'])) {
+                        echo "<p>" . $json_decoded['datasets'][$i]['metas']['attributions'] . "</p>";
+                    }
+                    echo '</div>';
+                }
+
+            }
+
+            // Prints resident results
 
             echo "<p> Resident search </p>";
 
-            echo '<div class="item">';
-            echo $json_decoded_2['datasets']['2']['metas']['title'];
-            echo $json_decoded_2['datasets']['2']['metas']['description'];
-            echo $json_decoded_2['datasets']['2']['metas']['attributions'];
+            for ($i = 0; $i < $count_2; $i++) {
 
-            echo '</div>';
+                if (!empty($json_decoded_2['datasets'][$i]['metas']['title'])) {
+                    echo '<div class="item">';
+                    if (!empty($json_decoded_2['datasets'][$i]['metas']['title'])) {
+                        echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['title'] . "</p>";
+                    }
+
+                    if (!empty($json_decoded_2['datasets'][$i]['metas']['description'])) {
+                        echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['description'] . "<p>";
+                    }
+                    if (!empty($json_decoded_2['datasets'][$i]['metas']['attributions'])) {
+                        echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['attributions'] . "</p>";
+                    }
+                    echo '</div>';
+                }
+
+            }
+
+            //Prints plan results
+
+            echo "<p> Plan search </p>";
+
+            for ($i = 0; $i < $count_2; $i++) {
+
+                if (!empty($json_decoded_3['datasets'][$i]['metas']['title'])) {
+                    echo '<div class="item">';
+                    if (!empty($json_decoded_3['datasets'][$i]['metas']['title'])) {
+                        echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['title'] . "</p>";
+                    }
+
+                    if (!empty($json_decoded_3['datasets'][$i]['metas']['description'])) {
+                        echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['description'] . "<p>";
+                    }
+                    if (!empty($json_decoded_3['datasets'][$i]['metas']['attributions'])) {
+                        echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['attributions'] . "</p>";
+                    }
+                    echo '</div>';
+                }
+
+            }
 
             ?>
+
             <div id="container" class="container">
 
             </div>
