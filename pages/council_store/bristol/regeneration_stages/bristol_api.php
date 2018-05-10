@@ -146,6 +146,8 @@
             $json_decoded_2 = json_decode($json_2, true);
             $json_decoded_3 = json_decode($json_3, true);
 
+
+            // Create count on increment
             $count   = $json_decoded['nhits'];
             $count_2 = $json_decoded_2['nhits'];
             $count_3 = $json_decoded_3['nhits'];
@@ -158,9 +160,7 @@
 
                 if (!empty($json_decoded['datasets'][$i]['metas']['title'])) {
                     echo '<div class="item">';
-                    if (!empty($json_decoded['datasets'][$i]['metas']['title'])) {
-                        echo "<p>" . $json_decoded['datasets'][$i]['metas']['title'] . "</p>";
-                    }
+                    echo "<p>" . $json_decoded['datasets'][$i]['metas']['title'] . "</p>";
 
                     if (!empty($json_decoded['datasets'][$i]['metas']['description'])) {
                         echo "<p>" . $json_decoded['datasets'][$i]['metas']['description'] . "<p>";
@@ -181,9 +181,7 @@
 
                 if (!empty($json_decoded_2['datasets'][$i]['metas']['title'])) {
                     echo '<div class="item">';
-                    if (!empty($json_decoded_2['datasets'][$i]['metas']['title'])) {
-                        echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['title'] . "</p>";
-                    }
+                    echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['title'] . "</p>";
 
                     if (!empty($json_decoded_2['datasets'][$i]['metas']['description'])) {
                         echo "<p>" . $json_decoded_2['datasets'][$i]['metas']['description'] . "<p>";
@@ -204,9 +202,7 @@
 
                 if (!empty($json_decoded_3['datasets'][$i]['metas']['title'])) {
                     echo '<div class="item">';
-                    if (!empty($json_decoded_3['datasets'][$i]['metas']['title'])) {
-                        echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['title'] . "</p>";
-                    }
+                    echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['title'] . "</p>";
 
                     if (!empty($json_decoded_3['datasets'][$i]['metas']['description'])) {
                         echo "<p>" . $json_decoded_3['datasets'][$i]['metas']['description'] . "<p>";

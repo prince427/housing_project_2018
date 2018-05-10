@@ -163,6 +163,8 @@
                                     $link = scandir($dir_path_2);
                                     $imagesDirectory = "uploads_image/";
 
+                                    // Prints out documents in uploads_document file and links it
+
                                     if(is_dir($dir_path_2));
                                     {
                                         $files_2 = scandir($dir_path_2);
@@ -174,6 +176,7 @@
                                         }
                                     }
 
+                                    // Prints out images in uploads_image file and links it
                                     if(is_dir($imagesDirectory))
                                     {
                                         $opendirectory = opendir($imagesDirectory);
